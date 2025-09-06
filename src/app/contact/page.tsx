@@ -26,21 +26,26 @@ export default function Contact() {
                         </p>
 
                         {/* Images */}
-                        <div className="row g-3">
-                            <div className="col-6">
-                                <img
-                                    src="/Images/contact-person-img.jpg"
-                                    alt="Person talking"
-                                    className="img-fluid rounded-3 shadow-sm"
-                                />
-                            </div>
-                            <div className="col-6 d-flex align-items-end">
-                                <img
-                                    src="/Images/contact-building-img.jpg"
-                                    alt="Building"
-                                    className="img-fluid rounded-3 shadow-sm"
-                                />
-                            </div>
+                        <div className="position-relative" style={{ width: '100%', height: '300px' }}>
+                            <img
+                                src="/Images/contact-person-img.jpg"
+                                alt="Person talking"
+                                className="img-fluid rounded-3 shadow-sm"
+                                style={{
+                                    position: 'absolute',
+                                    top: 10,
+                                    left: 170,
+                                    height: '80%',
+                                    objectFit: 'contain',
+                                    backgroundColor: '#FFF5D9',
+                                }}
+                            />
+                            <img
+                                src="/Images/contact-building-img.jpg"
+                                alt="Building"
+                                className="img-fluid rounded-3 shadow-sm"
+                                style={{ position: 'absolute', top: 180, left: 300, height: '80%', objectFit: 'cover' }}
+                            />
                         </div>
                     </div>
                 </div>
