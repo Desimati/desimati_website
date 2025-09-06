@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+.about-section {
+    padding: 30px 30px;
+    color: #333;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #7a3d00;
+    margin: 0;
+}
+
+.section-decor {
+    width: 60px;
+    height: 50px;
+}
+
+
+.about-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    color: #5a2d00;
+}
+
+.highlight {
+    color: #BCA72A;
+    font-weight: 600;
+}
+
+.image-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image {
+    max-width: 80%;
+    border-radius: 12px;
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s step-start;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.25));
+}
+
+.about-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+.about-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+    margin-left: -70px;
+}
+
+.about-item span {
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 5px;
+    color: #5a2d00;
+}
+
+.about-item p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: #5a2d00;
+}
