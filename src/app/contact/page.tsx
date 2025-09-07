@@ -30,8 +30,9 @@ export default function Contact() {
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="fw-bold mb-3"
+                            className="mb-3"
                             style={{
+                                fontWeight: "400",
                                 fontSize: "2.5rem",
                                 color: "#553500",
                                 fontFamily: "playfair display",
