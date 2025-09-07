@@ -1,6 +1,7 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { restrictToIndianMobile, validateIndianMobile } from "../utils/FormValidators";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -217,6 +218,9 @@ export default function Contact() {
                                     <input
                                         type="tel"
                                         className="form-control"
+                                        onKeyDown={restrictToIndianMobile}
+                                        minLength={10}
+                                        maxLength={10}
                                         style={{ backgroundColor: "#FFE69A" }}
                                     />
                                 </div>
