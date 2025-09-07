@@ -1,7 +1,27 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0 },
+};
 
 export default function Contact() {
+    const formControls = useAnimation();
+    useEffect(() => {
+        formControls.set("hidden");
+    }, [formControls]);
     return (
         <div className="container-fluid">
             <div className="row">
@@ -101,6 +121,9 @@ export default function Contact() {
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
+                    onAnimationComplete={() => {
+                        formControls.start("show");
+                    }}
                     className="col-md-6 p-0 position-relative d-flex justify-content-center align-items-center"
                     style={{ minHeight: "92vh", overflow: "hidden" }}
                 >
@@ -125,7 +148,7 @@ export default function Contact() {
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.4 }}
+                            transition={{ duration: 1, delay: 1 }}
                             className="mb-0 fw-semibold"
                             style={{ color: "#553500", lineHeight: "1.7" }}
                         >
@@ -133,8 +156,12 @@ export default function Contact() {
                             right away.
                         </motion.p>
 
-                        <form>
-                            <div className="row mt-4">
+                        <motion.form
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate={formControls}
+                        >
+                            <motion.div variants={itemVariants} className="row mt-4">
                                 <div className="col-md-6 mb-2">
                                     <label
                                         className="form-label fw-semibold"
@@ -161,9 +188,9 @@ export default function Contact() {
                                         style={{ backgroundColor: "#FFE69A" }}
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="row">
+                            <motion.div variants={itemVariants} className="row">
                                 <div className="col-md-12 mb-2">
                                     <label
                                         className="form-label fw-semibold"
@@ -177,9 +204,9 @@ export default function Contact() {
                                         style={{ backgroundColor: "#FFE69A" }}
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="row">
+                            <motion.div variants={itemVariants} className="row">
                                 <div className="col-md-12 mb-2">
                                     <label
                                         className="form-label fw-semibold"
@@ -193,9 +220,9 @@ export default function Contact() {
                                         style={{ backgroundColor: "#FFE69A" }}
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="row">
+                            <motion.div variants={itemVariants} className="row">
                                 <div className="col-md-12 mb-2">
                                     <label
                                         className="form-label fw-semibold"
@@ -209,9 +236,9 @@ export default function Contact() {
                                         style={{ backgroundColor: "#FFE69A" }}
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="row">
+                            <motion.div variants={itemVariants} className="row">
                                 <div className="col-md-12 mb-2">
                                     <label
                                         className="form-label fw-semibold"
@@ -228,9 +255,9 @@ export default function Contact() {
                                         <option value="2">Support Expert</option>
                                     </select>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="row mb-4">
+                            <motion.div variants={itemVariants} className="row mb-4">
                                 <div className="col-md-12 mb-2">
                                     <label
                                         className="form-label fw-semibold"
@@ -247,19 +274,32 @@ export default function Contact() {
                                         <option value="2">Support Expert</option>
                                     </select>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <p
-                                style={{ color: "#553500", fontSize: ".8rem", marginBottom: "2.5rem" }}
-                                className="fw-semibold"
-                            >
-                                <input type="checkbox" style={{ accentColor: "#FFE69A" }} className="me-1"/> Yes I
-                                would like to receive occasional news and tips on how to expand my
-                                business intentionally.
-                            </p>
+                            <motion.div variants={itemVariants}>
+                                <p
+                                    style={{ color: "#553500", fontSize: ".8rem", marginBottom: "2.5rem" }}
+                                    className="fw-semibold"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        style={{ accentColor: "#FFE69A" }}
+                                        className="me-1"
+                                    />{" "}
+                                    Yes I would like to receive occasional news and tips on how to
+                                    expand my business intentionally.
+                                </p>
+                            </motion.div>
 
-                            <button className="btn btn-xl text-light w-100 rounded-pill fw-semibold" style={{ backgroundColor: "#553500" }}>Contact us</button>
-                        </form>
+                            <motion.div variants={itemVariants}>
+                                <button
+                                    className="btn btn-xl text-light w-100 rounded-pill fw-semibold"
+                                    style={{ backgroundColor: "#553500" }}
+                                >
+                                    Contact us
+                                </button>
+                            </motion.div>
+                        </motion.form>
                     </div>
                 </motion.div>
             </div>
