@@ -174,6 +174,7 @@ export default function Contact() {
                                         type="text"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        required
                                     />
                                 </div>
                                 <div className="col-md-6 mb-2">
@@ -187,6 +188,7 @@ export default function Contact() {
                                         type="text"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        required
                                     />
                                 </div>
                             </motion.div>
@@ -203,6 +205,7 @@ export default function Contact() {
                                         type="email"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        required
                                     />
                                 </div>
                             </motion.div>
@@ -222,6 +225,7 @@ export default function Contact() {
                                         minLength={10}
                                         maxLength={10}
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        required
                                     />
                                 </div>
                             </motion.div>
