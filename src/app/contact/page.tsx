@@ -249,13 +249,15 @@ export default function Contact() {
                             </div>
 
                             <p
-                                style={{ color: "#553500", fontSize: ".8rem" }}
+                                style={{ color: "#553500", fontSize: ".8rem", marginBottom: "2.5rem" }}
                                 className="fw-semibold"
                             >
-                                <input type="checkbox" style={{ accentColor: "#FFE69A" }} /> Yes I
+                                <input type="checkbox" style={{ accentColor: "#FFE69A" }} className="me-1"/> Yes I
                                 would like to receive occasional news and tips on how to expand my
                                 business intentionally.
                             </p>
+
+                            <button className="btn btn-xl text-light w-100 rounded-pill fw-semibold" style={{ backgroundColor: "#553500" }}>Contact us</button>
                         </form>
                     </div>
                 </motion.div>
