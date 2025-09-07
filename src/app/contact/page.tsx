@@ -16,7 +16,6 @@ export default function Contact() {
                     }}
                 >
                     <div className="container py-5">
-                        {/* Small heading */}
                         <motion.p
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -27,7 +26,6 @@ export default function Contact() {
                             Contact us
                         </motion.p>
 
-                        {/* Big heading */}
                         <motion.h1
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -42,13 +40,12 @@ export default function Contact() {
                             How can we help ?
                         </motion.h1>
 
-                        {/* Paragraph */}
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.4 }}
-                            className="mb-4"
-                            style={{ color: "#553500", lineHeight: "1.7" }}
+                            className="mb-4 fw-semibold"
+                            style={{ color: "#553500" }}
                         >
                             Lorem ipsum dolor sit amet consectetur. Dignissim enim faucibus blandit
                             massa non id. Nunc vitae dictum senectus pharetra. Feugiat dui suspendisse
@@ -57,7 +54,6 @@ export default function Contact() {
                             sollicitudin. In massa.
                         </motion.p>
 
-                        {/* Responsive Images */}
                         <div
                             className="position-relative"
                             style={{ width: "100%", height: "300px", marginBottom: "4rem" }}
@@ -104,14 +100,164 @@ export default function Contact() {
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="col-md-6 p-0"
+                    className="col-md-6 p-0 position-relative d-flex justify-content-center align-items-center"
+                    style={{ minHeight: "92vh", overflow: "hidden" }}
                 >
                     <img
                         src="/Images/contact-bg-img.png"
                         alt="Farm Image"
-                        className="img-fluid w-100 h-100"
-                        style={{ objectFit: "cover" }}
+                        className="w-100 h-100 position-absolute"
+                        style={{ objectFit: "cover", top: 0, left: 0, zIndex: 0 }}
                     />
+
+                    <div
+                        className="position-relative"
+                        style={{
+                            backgroundColor: "#FFF5D9",
+                            padding: "1.5rem",
+                            borderRadius: "0.75rem",
+                            maxWidth: "80%",
+                            boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
+                            zIndex: 1,
+                        }}
+                    >
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.4 }}
+                            className="mb-0 fw-semibold"
+                            style={{ color: "#553500", lineHeight: "1.7" }}
+                        >
+                            Fill out the form and a sales or support expert will be in touch
+                            right away.
+                        </motion.p>
+
+                        <form>
+                            <div className="row mt-4">
+                                <div className="col-md-6 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        First name*
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        style={{ backgroundColor: "#FFE69A" }}
+                                    />
+                                </div>
+                                <div className="col-md-6 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        Last name*
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        style={{ backgroundColor: "#FFE69A" }}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-md-12 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        Email ID*
+                                    </label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        style={{ backgroundColor: "#FFE69A" }}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-md-12 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        Phone number*
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        className="form-control"
+                                        style={{ backgroundColor: "#FFE69A" }}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-md-12 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        Company name*
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        style={{ backgroundColor: "#FFE69A" }}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-md-12 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        Service*
+                                    </label>
+                                    <select
+                                        className="form-select fw-semibold"
+                                        style={{ backgroundColor: "#FFE69A", color: "#553500" }}
+                                    >
+                                        <option defaultValue="">Select</option>
+                                        <option value="1">Sales</option>
+                                        <option value="2">Support Expert</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="row mb-4">
+                                <div className="col-md-12 mb-2">
+                                    <label
+                                        className="form-label fw-semibold"
+                                        style={{ color: "#553500", fontSize: ".8rem" }}
+                                    >
+                                        Service*
+                                    </label>
+                                    <select
+                                        className="form-select fw-semibold"
+                                        style={{ backgroundColor: "#FFE69A", color: "#553500" }}
+                                    >
+                                        <option defaultValue="">Select</option>
+                                        <option value="1">Sales</option>
+                                        <option value="2">Support Expert</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p
+                                style={{ color: "#553500", fontSize: ".8rem" }}
+                                className="fw-semibold"
+                            >
+                                <input type="checkbox" style={{ accentColor: "#FFE69A" }} /> Yes I
+                                would like to receive occasional news and tips on how to expand my
+                                business intentionally.
+                            </p>
+                        </form>
+                    </div>
                 </motion.div>
             </div>
         </div>
