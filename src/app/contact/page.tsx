@@ -242,6 +242,7 @@ export default function Contact() {
                                         type="text"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        required
                                     />
                                 </div>
                             </motion.div>
@@ -257,8 +258,9 @@ export default function Contact() {
                                     <select
                                         className="form-select fw-semibold"
                                         style={{ backgroundColor: "#FFE69A", color: "#553500" }}
+                                        required
                                     >
-                                        <option defaultValue="">Select</option>
+                                        <option value="">Select</option>
                                         <option value="1">Sales</option>
                                         <option value="2">Support Expert</option>
                                     </select>
@@ -271,16 +273,9 @@ export default function Contact() {
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
                                     >
-                                        Service*
+                                        Enter your query*
                                     </label>
-                                    <select
-                                        className="form-select fw-semibold"
-                                        style={{ backgroundColor: "#FFE69A", color: "#553500" }}
-                                    >
-                                        <option defaultValue="">Select</option>
-                                        <option value="1">Sales</option>
-                                        <option value="2">Support Expert</option>
-                                    </select>
+                                    <textarea className="form-control" style={{ backgroundColor: "#FFE69A" }} required></textarea>
                                 </div>
                             </motion.div>
 
