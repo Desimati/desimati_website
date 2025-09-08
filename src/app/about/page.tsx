@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <div className="text-center" >
-        <img className="img-fluid  " src="/Images/mainabout.png" alt="about us" />
+        <img className="p-2 " src="/Images/mainabout.png" alt="about us" width="100%" />
         </div>
 
         <div>
