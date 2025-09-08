@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
-
 .footer {
   background-color: #b26800;
   color: #fff;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit) !important;
   padding: 40px 20px 0 20px;   
 }
 
@@ -23,7 +21,7 @@
 }
 
 .footer-email {
-  font-family: 'Outfit', sans-serif !important;
+  font-family: var(--font-outfit) !important;
   font-weight: bold !important;
   font-size: 40px !important;
   text-decoration: underline !important;
@@ -31,13 +29,13 @@
 }
 
 .footer h5 {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-outfit) !important;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
 .footer-big-text {
-  font-family: 'Playfair Display', serif !important;
+  font-family: var(--font-playfair) !important;
   font-size: 183px !important;
   font-weight: 700;
   color: #fff;
