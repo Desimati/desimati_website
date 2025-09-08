@@ -1,7 +1,17 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, ChangeEvent, FormEvent, useState } from "react";
 import { restrictToIndianMobile } from "../utils/FormValidators";
+
+interface ContactFormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    company: string;
+    service: string;
+    query: string;
+}
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -20,9 +30,58 @@ const itemVariants = {
 
 export default function Contact() {
     const formControls = useAnimation();
+
+    const [formData, setFormData] = useState<ContactFormData>({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        query: "",
+    });
+
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         formControls.set("hidden");
     }, [formControls]);
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                alert("✅ Message sent successfully!");
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phone: "",
+                    company: "",
+                    service: "",
+                    query: "",
+                });
+            } else {
+                alert("❌ Something went wrong. Try again.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("⚠️ Network error. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div className="container-fluid">
             <div className="row">
@@ -161,6 +220,7 @@ export default function Contact() {
                             variants={containerVariants}
                             initial="hidden"
                             animate={formControls}
+                            onSubmit={handleSubmit}
                         >
                             <motion.div variants={itemVariants} className="row mt-4">
                                 <div className="col-md-6 mb-2">
@@ -172,8 +232,11 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="text"
+                                        name="firstName"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        value={formData.firstName}
+                                        onChange={handleChange}
                                         required
                                     />
                                 </div>
@@ -186,8 +249,11 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="text"
+                                        name="lastName"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        value={formData.lastName}
+                                        onChange={handleChange}
                                         required
                                     />
                                 </div>
@@ -203,8 +269,11 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="email"
+                                        name="email"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         required
                                     />
                                 </div>
@@ -219,12 +288,15 @@ export default function Contact() {
                                         Phone number*
                                     </label>
                                     <input
-                                        type="tel"
+                                        type="text"
+                                        name="phone"
                                         className="form-control"
                                         onKeyDown={restrictToIndianMobile}
                                         minLength={10}
                                         maxLength={10}
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         required
                                     />
                                 </div>
@@ -240,8 +312,11 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="text"
+                                        name="company"
                                         className="form-control"
                                         style={{ backgroundColor: "#FFE69A" }}
+                                        value={formData.company}
+                                        onChange={handleChange}
                                         required
                                     />
                                 </div>
@@ -256,8 +331,11 @@ export default function Contact() {
                                         Service*
                                     </label>
                                     <select
+                                        name="service"
                                         className="form-select fw-semibold"
                                         style={{ backgroundColor: "#FFE69A", color: "#553500" }}
+                                        value={formData.service}
+                                        onChange={handleChange}
                                         required
                                     >
                                         <option value="">Select</option>
@@ -275,7 +353,7 @@ export default function Contact() {
                                     >
                                         Enter your query*
                                     </label>
-                                    <textarea className="form-control" style={{ backgroundColor: "#FFE69A" }} required></textarea>
+                                    <textarea name="query" className="form-control" style={{ backgroundColor: "#FFE69A" }} value={formData.query} onChange={handleChange} required></textarea>
                                 </div>
                             </motion.div>
 
@@ -296,10 +374,12 @@ export default function Contact() {
 
                             <motion.div variants={itemVariants}>
                                 <button
+                                    type="submit"
+                                    disabled={loading}
                                     className="btn btn-xl text-light w-100 rounded-pill fw-semibold"
                                     style={{ backgroundColor: "#553500" }}
                                 >
-                                    Contact us
+                                    {loading ? "Sending..." : "Contact us"}
                                 </button>
                             </motion.div>
                         </motion.form>
