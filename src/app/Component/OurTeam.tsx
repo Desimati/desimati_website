@@ -13,36 +13,27 @@ const members = [
 ];
 
 export default function Team() {
-  const [active, setActive] = useState(3); // middle by default
+  const [active, setActive] = useState(3);
+  const total = members.length;
 
   return (
-    <section className="team-section container-fluid px-4">
+    <section className="container-fluid px-4">
       <div className="section-heading">
         <h2 className="section-title">Our Team</h2>
         <img src="/Images/heading.png" alt="Decor" className="section-decor" />
       </div>
 
-      <div className="cards-stage">
+      <div className="cards-stage team-section ">
         {members.map((m, i) => {
-          const offset = i - active;
+          let offset = i - active;
+          if (offset > total / 2) offset -= total;
+          if (offset < -total / 2) offset += total;
 
-          // Center card
-          if (offset === 0) {
-            return (
-              <div
-                key={i}
-                className="tcard center"
-                onMouseEnter={() => setActive(i)}
-              >
-                <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
-              </div>
-            );
-          }
+          if (Math.abs(offset) > 3) return null;
 
-          // Left & Right spread (max 3 cards each side)
-          const spread = 40; // horizontal distance between cards
-          const lift = 30; // vertical curve
-          const angle = offset * 20; // slight rotation
+          const spread = 20; // horizontal curve
+          const lift = 40; // vertical curve
+          const angle = offset * 22; // slight rotation
 
           const x = offset * spread;
           const y = Math.abs(offset) * lift;
@@ -50,11 +41,10 @@ export default function Team() {
           return (
             <div
               key={i}
-              className="tcard"
+              className={`tcard ${offset === 0 ? "center" : ""}`}
               style={{
                 transform: `translate(${x}px, -${150 - y}px) rotate(${angle}deg)`,
                 zIndex: 10 - Math.abs(offset),
-                opacity: Math.abs(offset) > 3 ? 0 : 1, // only 3 left/right visible
               }}
               onMouseEnter={() => setActive(i)}
             >
@@ -63,7 +53,6 @@ export default function Team() {
           );
         })}
 
-        {/* Base vector image */}
         <img
           src="/Images/vector7.png"
           alt="decor"
