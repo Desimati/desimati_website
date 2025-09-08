@@ -30,6 +30,8 @@ const itemVariants = {
 
 export default function Contact() {
     const formControls = useAnimation();
+    const [errors, setErrors] = useState<{ [key: string]: string }>({});
+    const [checkboxChecked, setCheckboxChecked] = useState(false);
 
     const [formData, setFormData] = useState<ContactFormData>({
         firstName: "",
@@ -52,6 +54,26 @@ export default function Contact() {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+        const newErrors: { [key: string]: string } = {};
+        Object.entries(formData).forEach(([key, value]) => {
+            if (!value.trim()) {
+                newErrors[key] = "This field is required";
+            }
+        });
+        if (!checkboxChecked) {
+            newErrors.checkbox = "You must agree to receive news and tips.";
+        }
+        if (formData.phone && formData.phone.length !== 10) {
+            newErrors.phone = "Phone number must be 10 digits";
+        }
+        if (formData.email && !/^\S+@\S+\.\S+$/.test(formData.email)) {
+            newErrors.email = "Invalid email address";
+        }
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+        setErrors({});
         setLoading(true);
         try {
             const res = await fetch("/api/contact", {
@@ -69,7 +91,7 @@ export default function Contact() {
                     phone: "",
                     company: "",
                     service: "",
-                    query: "",
+                    query: ""
                 });
             } else {
                 alert("❌ Something went wrong. Try again.");
@@ -239,6 +261,11 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {errors.firstName && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.firstName}
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="col-md-6 mb-2">
                                     <label
@@ -256,6 +283,11 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {errors.lastName && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.lastName}
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -276,6 +308,11 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {errors.email && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.email}
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -299,6 +336,11 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {errors.phone && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.phone}
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -319,6 +361,11 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {errors.company && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.company}
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -342,6 +389,11 @@ export default function Contact() {
                                         <option value="BusinessInquiry">Business Inquiry</option>
                                         <option value="GeneralSupport">General Support</option>
                                     </select>
+                                    {errors.service && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.service}
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -354,6 +406,11 @@ export default function Contact() {
                                         Enter your query*
                                     </label>
                                     <textarea name="query" className="form-control" style={{ backgroundColor: "#FFE69A" }} value={formData.query} onChange={handleChange} required></textarea>
+                                    {errors.query && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.query}
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -366,9 +423,16 @@ export default function Contact() {
                                         type="checkbox"
                                         style={{ accentColor: "#FFE69A" }}
                                         className="me-1"
+                                        checked={checkboxChecked}
+                                        onChange={(e) => setCheckboxChecked(e.target.checked)}
                                     />{" "}
                                     Yes I would like to receive occasional news and tips on how to
                                     expand my business intentionally.
+                                    {errors.checkbox && (
+                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                            {errors.checkbox}
+                                        </div>
+                                    )}
                                 </p>
                             </motion.div>
 
