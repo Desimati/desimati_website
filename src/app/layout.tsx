@@ -6,17 +6,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
 
-// 👇 Fonts setup
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -42,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${playfair.variable}`}
+      className={`${outfit.variable} ${playfair.variable}`}
     >
       <body>
         <Navbar />
