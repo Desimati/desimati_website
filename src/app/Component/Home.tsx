@@ -36,11 +36,18 @@ export default function Home() {
         </div>
       </div>
       <div className="hero-partners">
-        <img src="/Images/instamart.png" alt="Swiggy" />
-        <img src="/Images/blinkit.png" alt="Blinkit" />
-        <img src="/Images/reliance.png" alt="Reliance Fresh" />
-        <img src="/Images/kfc.png" alt="KFC" />
-        <img src="/Images/dominos.png" alt="Dominos" />
+        <div className="partners-track">
+          <img src="/Images/instamart.png" alt="Swiggy" />
+          <img src="/Images/blinkit.png" alt="Blinkit" />
+          <img src="/Images/reliance.png" alt="Reliance Fresh" />
+          <img src="/Images/kfc.png" alt="KFC" />
+          <img src="/Images/dominos.png" alt="Dominos" />
+          <img src="/Images/instamart.png" alt="Swiggy" />
+          <img src="/Images/blinkit.png" alt="Blinkit" />
+          <img src="/Images/reliance.png" alt="Reliance Fresh" />
+          <img src="/Images/kfc.png" alt="KFC" />
+          <img src="/Images/dominos.png" alt="Dominos" />
+        </div>
       </div>
     </section>
   );
