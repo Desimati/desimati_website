@@ -6,14 +6,12 @@ export default function Footer() {
         <footer className="footer">
             <div className="container-fluid py-3">
                 <div className="row">
-                    {/* Logo + Email */}
                     <div className="col-md-4 mb-4">
-                        <img src="/Images/logo.png" alt="Logo" height="50" className="mb-3" />
+                        <img src="/Images/logo.png" alt="Logo" height="60" className="mb-3" />
                         <p>Send us an email -</p>
-                        <p className="footer-email">abc@gmail.com</p>
+                        <p className="footer-email">contactus@desimati.com</p>
                     </div>
 
-                    {/* Important Links */}
                     <div className="col-md-4 mb-4">
                         <h5>Important Links</h5>
                         <ul className="list-unstyled">
@@ -24,7 +22,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Address */}
                     <div className="col-md-4 mb-4">
                         <h5>Address</h5>
                         <p>
@@ -35,9 +32,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            {/* Bottom Text */}
             <div className="footer-bottom text-center mt-4 mb-0 pb-0">
-                <h1 className="footer-big-text">FRESH 2 HOME</h1>
+                <h1 className="footer-big-text">Rooted in farms driven by<br /> fairness committed to you</h1>
             </div>
         </footer>
     );

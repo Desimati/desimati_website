@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./../Style/Ourteam.css";
 
 const members = [
@@ -15,6 +15,14 @@ const members = [
 export default function Team() {
   const [active, setActive] = useState(3);
   const total = members.length;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % total);
+    }, 2000); 
+
+    return () => clearInterval(interval);
+  }, [total]);
 
   return (
     <section className="container-fluid px-4">
@@ -46,7 +54,7 @@ export default function Team() {
                 transform: `translate(${x}px, -${150 - y}px) rotate(${angle}deg)`,
                 zIndex: 10 - Math.abs(offset),
               }}
-              onMouseEnter={() => setActive(i)}
+              // onMouseEnter={() => setActive(i)}
             >
               <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
             </div>

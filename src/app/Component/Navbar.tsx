@@ -2,9 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import './../Style/Navbar.css';
+import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -18,14 +21,13 @@ export default function Navbar() {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={() => setOpen(!open)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* Menu Items */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div className={`collapse navbar-collapse justify-content-end ${open ? 'show' : ''}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
@@ -51,14 +53,14 @@ export default function Navbar() {
                 Our Journey
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 href="/jobs"
                 className={`nav-link ${pathname === "/jobs" ? "active-nav" : ""}`}
               >
                 Job Openings
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link
                 href="/contact"
