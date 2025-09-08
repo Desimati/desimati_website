@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import { Toaster } from "react-hot-toast";
 
 
 const geistSans = Geist({
@@ -32,6 +33,33 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar />
         {children}
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 2000,
+            style: {
+              marginTop: '60px',
+              marginRight: '20px',
+              padding: '16px 24px',
+              color: '#fff',
+              fontSize: '14px',
+              borderRadius: '10px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              animation: 'slideIn 0.4s ease',
+            },
+            success: {
+              style: {
+                background: '#26A65B',
+              },
+            },
+            error: {
+              style: {
+                background: '#ef4444',
+              },
+            },
+          }}
+        />
         {/* <Footer /> */}
       </body>
     </html>

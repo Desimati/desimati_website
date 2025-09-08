@@ -2,6 +2,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, ChangeEvent, FormEvent, useState } from "react";
 import { restrictToIndianMobile } from "../utils/FormValidators";
+import toast from "react-hot-toast";
 
 interface ContactFormData {
     firstName: string;
@@ -83,7 +84,7 @@ export default function Contact() {
             });
 
             if (res.ok) {
-                alert("✅ Message sent successfully!");
+                toast.success("Message sent successfully!");
                 setFormData({
                     firstName: "",
                     lastName: "",
@@ -94,11 +95,11 @@ export default function Contact() {
                     query: ""
                 });
             } else {
-                alert("❌ Something went wrong. Try again.");
+                toast.error("Something went wrong. Try again.");
             }
         } catch (error) {
             console.error("Error submitting form:", error);
-            alert("⚠️ Network error. Please try again.");
+            toast.error("Network error. Please try again.");
         } finally {
             setLoading(false);
         }
