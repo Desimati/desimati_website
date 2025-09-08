@@ -17,10 +17,9 @@
     height: 50px;
 }
 
-
 .clientreview-image {
     width: 100%;       
-    max-width: 500px;  
+    max-width: 400px;  
     height: auto;      
     display: block;
     margin: 0 auto;     
