@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
 
 .nav-link{
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair);
   font-size: 22px; 
   font-weight: 400;
   color: brown !important;
