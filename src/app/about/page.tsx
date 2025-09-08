@@ -7,16 +7,7 @@ export default function About() {
       <div className="text-center" >
         <img className="img-fluid  " src="/Images/mainabout.png" alt="about us" />
         </div>
-
-    return (
-        <>
-            <div>
-                <img className='p-2 m-2' src="/Images/mainabout.png" alt="aboutus" width="100%" />
-                <h1 className="p-2 m-3" style={{ color: "#7E4E00" }}>Our Mission</h1>
-                <h6 className='p-2 m-2' style={{color:"#472401E5"}}>At <span style={{ color: "#472401" }}>Desimati</span>, we are reimagining how India buys and enjoys fruits and vegetables. By directly connecting farmers with consumers
-                    and businesses, we cut out middlemen to deliver produce that is fresher, safer, and more affordable.
-                    Our verticals are as follows :-</h6>
-            </div>
+  
         <div>
         <h1 className="p-2 m-3" style={{ color: "#7E4E00" }}>Our Mission</h1>
         <h6 className="p-2 m-2" style={{ color: "#472401E5" }}>

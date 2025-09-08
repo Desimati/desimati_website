@@ -1,17 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
-
-.team-section {
-  padding: 48px 30px 64px;
-  position: relative;
-  overflow: hidden;
-}
-
 .section-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
+
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: 30px;
@@ -19,118 +12,48 @@
   color: #7a3d00;
   margin: 0;
 }
-.section-decor { width: 60px; height: 50px; }
 
-.decor { position: absolute; pointer-events: none; user-select: none; }
-.decor-left   { left: 6px;  top: 90px;  width: 72px; }
-.decor-right  { right: 8px; top: 60px;  width: 78px; }
-.decor-bottom { left: 50%; transform: translateX(-50%); bottom: 0; width: 160px; }
+.section-decor {
+  width: 60px;
+  height: 50px;
+}
 
 .cards-stage {
   position: relative;
-  height: 440px; 
-  margin-top: 18px;
-}
-
-.tcard {
-  --shadow: 0 12px 28px rgba(0,0,0,.18);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 240px;
-  height: 360px;
-  transform: translate(-50%, -50%);
-  border-radius: 18px;
-  background: #fff8ee;                
-  box-shadow: var(--shadow);
-  transition: transform .7s ease, opacity .7s ease, z-index .7s ease, filter .7s ease;
-  opacity: 0;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,.12));
+  height: 650px;
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.tcard-topbar {
-  background: #8b5a2b;                
-  color: #fff8e1;
-  padding: 10px 14px;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  letter-spacing: .2px;
-}
-.tcard-name { font-size: 16px; }
-
-.tcard-avatar {
-  width: 84%;
-  margin: 18px auto 8px;
-  display: block;
-  border-radius: 14px;
-}
-
-.tcard-role {
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #5a2d00;
-  text-align: center;
-  margin-top: 4px;
-}
-.tcard-quote {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  color: #7a3d00;
-  opacity: .85;
-  text-align: center;
-  padding: 8px 14px 0;
-}
-
-.tcard.center {
-  opacity: 1;
-  z-index: 5;
-  transform: translate(-50%, -50%) scale(1.06) rotate(0deg);
-}
-.tcard.left1 {
-  opacity: .95;
-  z-index: 4;
-  transform: translate(calc(-50% - 190px), -50%) rotate(-12deg) scale(.93);
-}
-.tcard.right1 {
-  opacity: .95;
-  z-index: 4;
-  transform: translate(calc(-50% + 190px), -50%) rotate(12deg) scale(.93);
-}
-.tcard.left2 {
-  opacity: .85;
-  z-index: 3;
-  transform: translate(calc(-50% - 320px), -50%) rotate(-22deg) scale(.87);
-}
-.tcard.right2 {
-  opacity: .85;
-  z-index: 3;
-  transform: translate(calc(-50% + 320px), -50%) rotate(22deg) scale(.87);
-}
-.tcard.hidden {
-  opacity: 0;
-  z-index: 1;
-  transform: translate(-50%, -50%) scale(.75);
+.team-decor-front {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  z-index: -1;
   pointer-events: none;
 }
 
-@media (hover:hover) and (pointer:fine) {
-  .tcard.center:hover { transform: translate(-50%, -50%) scale(1.08); }
+.tcard {
+  position: absolute;
+  bottom: 100px; 
+  width: 200px;
+  height: 300px;
+  transition: all 0.6s ease;
+  transform-origin: bottom center;
+  cursor: pointer;
 }
 
-@media (max-width: 992px) {
-  .cards-stage { height: 420px; }
-  .tcard { width: 220px; height: 330px; }
-  .tcard.left2, .tcard.right2 { opacity: 0; pointer-events: none; }
+.tcard img.tcard-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: contain;
 }
-@media (max-width: 640px) {
-  .cards-stage { height: 360px; }
-  .tcard { width: 200px; height: 300px; }
-  .tcard.left1, .tcard.right1, .tcard.left2, .tcard.right2 { opacity: 0; }
-  .tcard.center { transform: translate(-50%, -50%) scale(1.02); }
-  .decor-left, .decor-right { display: none; }
+
+.tcard.center {
+  transform: translate(-8%, -170px) scale(1.2) !important;
+  z-index: 10 !important;
 }

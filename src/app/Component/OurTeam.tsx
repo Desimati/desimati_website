@@ -1,80 +1,75 @@
 "use client";
-import { useEffect, useState, useMemo } from "react";
+import { useState } from "react";
 import "./../Style/Ourteam.css";
 
 const members = [
-    {
-        name: "Ashish Kushwaha",
-        role: "Director – Operations",
-        img: "/Images/ashish.png",
-        quote:
-            "Great work isn’t about doing more; it’s about doing what matters—with focus, passion, and persistence.",
-    },
-    { name: "Dhruv Malik", role: "Lead", img: "/Images/dhruv.png" },
-    { name: "Rohit Nautiyal", role: "Manager", img: "/Images/rohit.png" },
-    { name: " Diptiman Chowdhury", role: "Co-Founder", img: "/Images/diptiman.png" },
-    { name: "Shubham", role: "Engineer", img: "/Images/shubham.png" },
+  { img: "/Images/ourteam.png" },
+  { img: "/Images/ourteam1.png" },
+  { img: "/Images/ourteam2.png" },
+  { img: "/Images/ourteam.png" },
+  { img: "/Images/ourteam1.png" },
+  { img: "/Images/ourteam2.png" },
+  { img: "/Images/ourteam.png" },
 ];
 
 export default function Team() {
-    const [active, setActive] = useState(0);
-    const [paused, setPaused] = useState(false);
+  const [active, setActive] = useState(3); // middle by default
 
-    useEffect(() => {
-        if (paused) return;
-        const id = setInterval(() => {
-            setActive((i) => (i + 1) % members.length);
-        }, 3000);
-        return () => clearInterval(id);
-    }, [paused]);
+  return (
+    <section className="team-section container-fluid px-4">
+      <div className="section-heading">
+        <h2 className="section-title">Our Team</h2>
+        <img src="/Images/heading.png" alt="Decor" className="section-decor" />
+      </div>
 
-    const getPosClass = (index: number) => {
-        const n = members.length;
-        const diff = (index - active + n) % n; // 0..n-1
-        if (diff === 0) return "center";
-        if (diff === 1) return "right1";
-        if (diff === 2) return "right2";
-        if (diff === n - 1) return "left1";
-        if (diff === n - 2) return "left2";
-        return "hidden";
-    };
+      <div className="cards-stage">
+        {members.map((m, i) => {
+          const offset = i - active;
 
-    return (
-        <section className="team-section container-fluid px-4">
-            <div className="section-heading">
-                <h2 className="section-title">Our Team</h2>
-                <img src="/Images/heading.png" alt="Decor" className="section-decor" />
-            </div>
+          // Center card
+          if (offset === 0) {
+            return (
+              <div
+                key={i}
+                className="tcard center"
+                onMouseEnter={() => setActive(i)}
+              >
+                <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
+              </div>
+            );
+          }
 
-            <img src="/Images/vector1.png" className="decor decor-left" alt="" />
-            <img src="/Images/vector2.png" className="decor decor-left" alt="" />
-            <img src="/Images/vector3.png" className="decor decor-left" alt="" />
-            <img src="/Images/vector4.png" className="decor decor-left" alt="" />
-            <img src="/Images/vector5.png" className="decor decor-right" alt="" />
-            <img src="/Images/vector6.png" className="decor decor-right" alt="" />
+          // Left & Right spread (max 3 cards each side)
+          const spread = 40; // horizontal distance between cards
+          const lift = 30; // vertical curve
+          const angle = offset * 20; // slight rotation
+
+          const x = offset * spread;
+          const y = Math.abs(offset) * lift;
+
+          return (
             <div
-                className="cards-stage"
-                onMouseEnter={() => setPaused(true)}
-                onMouseLeave={() => setPaused(false)}
+              key={i}
+              className="tcard"
+              style={{
+                transform: `translate(${x}px, -${150 - y}px) rotate(${angle}deg)`,
+                zIndex: 10 - Math.abs(offset),
+                opacity: Math.abs(offset) > 3 ? 0 : 1, // only 3 left/right visible
+              }}
+              onMouseEnter={() => setActive(i)}
             >
-                {members.map((m, i) => (
-                    <article
-                        key={m.name}
-                        className={`tcard ${getPosClass(i)}`}
-                        onClick={() => setActive(i)}
-                    >
-                        <div className="tcard-topbar">
-                            <span className="tcard-name">{m.name}</span>
-                        </div>
-
-                        <img src={m.img} alt={m.name} className="tcard-avatar" />
-
-                        <div className="tcard-role">{m.role}</div>
-
-                        {m.quote && <div className="tcard-quote">“{m.quote}”</div>}
-                    </article>
-                ))}
+              <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
             </div>
-        </section>
-    );
+          );
+        })}
+
+        {/* Base vector image */}
+        <img
+          src="/Images/vector7.png"
+          alt="decor"
+          className="team-decor-front"
+        />
+      </div>
+    </section>
+  );
 }
