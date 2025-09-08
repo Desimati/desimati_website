@@ -5,20 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function About() {
   return (
     <>
-      {/* Hero Image */}
-      <div className="text-center">
-        <Image
-          src="/Images/mainabout.png"
-          alt="about us"
-          width={1200}
-          height={600}
-          className="img-fluid"
-          priority
-        />
-      </div>
+      <div className="text-center" >
+        <img className="img-fluid  " src="/Images/mainabout.png" alt="about us" />
+        </div>
 
-      {/* Mission Section */}
-      <div>
+        <div>
         <h1 className="p-2 m-3" style={{ color: "#7E4E00" }}>Our Mission</h1>
         <h6 className="p-2 m-2" style={{ color: "#472401E5" }}>
           At <span style={{ color: "#472401" }}>Desimati</span>, we are reimagining how India buys and enjoys fruits and vegetables. 
