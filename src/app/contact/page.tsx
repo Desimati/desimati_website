@@ -1,7 +1,7 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
-import { restrictToIndianMobile, validateIndianMobile } from "../utils/FormValidators";
+import { restrictToIndianMobile } from "../utils/FormValidators";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -261,8 +261,8 @@ export default function Contact() {
                                         required
                                     >
                                         <option value="">Select</option>
-                                        <option value="1">Sales</option>
-                                        <option value="2">Support Expert</option>
+                                        <option value="BusinessInquiry">Business Inquiry</option>
+                                        <option value="GeneralSupport">General Support</option>
                                     </select>
                                 </div>
                             </motion.div>
