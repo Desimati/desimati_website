@@ -22,3 +22,13 @@
   background: url("/Images/group.png") no-repeat center;
   background-size: cover;
 }
+
+.navbar-collapse {
+  overflow-x: auto; 
+}
+
+.navbar-nav {
+  flex-direction: row; 
+  gap: 12px; 
+  font-size: 14px;
+}

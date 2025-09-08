@@ -51,7 +51,7 @@
   position: absolute;
   bottom: 100px; 
   width: 200px;
-  height: 300px;
+  height: 360px;
   transition: all 0.6s ease;
   transform-origin: bottom center;
   cursor: pointer;
