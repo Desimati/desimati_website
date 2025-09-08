@@ -1,13 +1,14 @@
 "use client";
+import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function About() {
   return (
     <>
       <div className="text-center" >
-        <img className="img-fluid  " src="/Images/mainabout.png" alt="about us" />
+        <img className="p-2 " src="/Images/mainabout.png" alt="about us" width="100%" />
         </div>
-  
+
         <div>
         <h1 className="p-2 m-3" style={{ color: "#7E4E00" }}>Our Mission</h1>
         <h6 className="p-2 m-2" style={{ color: "#472401E5" }}>
@@ -17,10 +18,17 @@ export default function About() {
         </h6>
       </div>
 
+      {/* Section 1 */}
       <div className="container my-4">
         <div className="row pt-2 align-items-center">
           <div className="col-md-6 text-center">
-            <img className="img-fluid p-2 m-2" src="/Images/mainabout2.png" alt="about" />
+            <Image
+              src="/Images/mainabout2.png"
+              alt="about"
+              width={600}
+              height={400}
+              className="img-fluid p-2 m-2"
+            />
           </div>
           <div className="col-md-6">
             <p className="p-2 pt-4" style={{ color: "#553500", marginTop: "20px" }}>
@@ -32,6 +40,7 @@ export default function About() {
           </div>
         </div>
 
+        {/* Section 2 */}
         <div className="row align-items-center my-4">
           <div className="col-md-6">
             <p className="p-2 m-2" style={{ color: "#553500", marginTop: "20px" }}>
@@ -42,15 +51,29 @@ export default function About() {
             </p>
           </div>
           <div className="col-md-6 text-center">
-            <img className="img-fluid" src="/Images/mainabout4.png" alt="about" />
+            <Image
+              src="/Images/mainabout4.png"
+              alt="about"
+              width={600}
+              height={400}
+              className="img-fluid"
+            />
           </div>
         </div>
 
+        {/* Vision Section */}
         <h1 className="p-2" style={{ color: "#7E4E00" }}>Our Vision</h1>
 
+        {/* Section 3 */}
         <div className="row align-items-center my-4">
           <div className="col-md-6 text-center">
-            <img className="img-fluid p-2 m-2" src="/Images/mainabout5.png" alt="about" />
+            <Image
+              src="/Images/mainabout5.png"
+              alt="about"
+              width={600}
+              height={400}
+              className="img-fluid p-2 m-2"
+            />
           </div>
           <div className="col-md-6">
             <p style={{ color: "#553500", marginTop: "20px" }}>
@@ -73,7 +96,13 @@ export default function About() {
             </p>
           </div>
           <div className="col-md-6 text-center">
-            <img className="img-fluid" src="/Images/mainabout6.png" alt="about" />
+            <Image
+              src="/Images/mainabout6.png"
+              alt="about"
+              width={600}
+              height={400}
+              className="img-fluid"
+            />
           </div>
         </div>
       </div>
