@@ -1,0 +1,14 @@
+html, body {
+  overflow-x: hidden;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #553500;
+  box-shadow: none;
+}
+
+::selection {
+  background: #553500;
+  color: #fff;
+}
