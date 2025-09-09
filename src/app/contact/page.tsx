@@ -151,11 +151,7 @@ export default function Contact() {
                             className="mb-4 fw-semibold"
                             style={{ color: "#553500" }}
                         >
-                            Lorem ipsum dolor sit amet consectetur. Dignissim enim faucibus blandit
-                            massa non id. Nunc vitae dictum senectus pharetra. Feugiat dui suspendisse
-                            laoreet vitae nibh purus quis tellus. Elementum orci vivamus ultricies
-                            quis arcu amet faucibus sed odio. Augue vestibulum nisl tortor vel sapien
-                            sollicitudin. In massa.
+                            We'd love to hear from you! Weather you need product information, technical assistance, or just want to connect - we're here to help.
                         </motion.p>
 
                         <div
@@ -221,9 +217,9 @@ export default function Contact() {
                         className="position-relative"
                         style={{
                             backgroundColor: "#FFF5D9",
-                            padding: "1.5rem",
+                            padding: "1rem",
                             borderRadius: "0.75rem",
-                            maxWidth: "80%",
+                            maxWidth: "65%",
                             boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
                             zIndex: 1,
                         }}
