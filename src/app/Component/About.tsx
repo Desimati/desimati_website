@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import "./../Style/About.css";
+import Image from "next/image";
+
 
 export default function About() {
     const images = [
@@ -26,9 +28,9 @@ export default function About() {
         <section className="about-section container-fluid px-4">
             <div className="section-heading">
                 <h2 className="section-title">About Us</h2>
-                <img src="/Images/heading.png" alt="Decor" className="section-decor" />
+                <Image src="/Images/heading.png" width={200} height={50} alt="Decor"className="section-decor" />
             </div>
-
+ 
             <p className="about-text">
                 At <span className="highlight">Desimati</span>, we are reimagining how
                 India buys and enjoys fruits and vegetables. By directly connecting
