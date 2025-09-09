@@ -123,7 +123,6 @@ export default function Contact() {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="mb-2"
                             style={{ color: "#B16E01", fontSize: "0.9rem" }}
                         >
                             Contact us
@@ -217,7 +216,7 @@ export default function Contact() {
                         className="position-relative"
                         style={{
                             backgroundColor: "#FFF5D9",
-                            padding: "1rem",
+                            padding: ".2rem 1rem",
                             borderRadius: "0.75rem",
                             maxWidth: "65%",
                             boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
@@ -228,8 +227,8 @@ export default function Contact() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 1 }}
-                            className="mb-0 fw-semibold"
-                            style={{ color: "#553500", lineHeight: "1.7" }}
+                            className="fw-semibold"
+                            style={{ color: "#553500", paddingTop: ".8rem" }}
                         >
                             Fill out the form and a sales or support expert will be in touch
                             right away.
@@ -241,8 +240,8 @@ export default function Contact() {
                             animate={formControls}
                             onSubmit={handleSubmit}
                         >
-                            <motion.div variants={itemVariants} className="row mt-4">
-                                <div className="col-md-6 mb-2">
+                            <motion.div variants={itemVariants} className="row">
+                                <div className="col-md-6">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -264,7 +263,7 @@ export default function Contact() {
                                         </div>
                                     )}
                                 </div>
-                                <div className="col-md-6 mb-2">
+                                <div className="col-md-6">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -289,7 +288,7 @@ export default function Contact() {
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="row">
-                                <div className="col-md-12 mb-2">
+                                <div className="col-md-12">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -314,7 +313,7 @@ export default function Contact() {
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="row">
-                                <div className="col-md-12 mb-2">
+                                <div className="col-md-12">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -342,7 +341,7 @@ export default function Contact() {
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="row">
-                                <div className="col-md-12 mb-2">
+                                <div className="col-md-12">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -367,7 +366,7 @@ export default function Contact() {
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="row">
-                                <div className="col-md-12 mb-2">
+                                <div className="col-md-12">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -394,8 +393,8 @@ export default function Contact() {
                                 </div>
                             </motion.div>
 
-                            <motion.div variants={itemVariants} className="row mb-4">
-                                <div className="col-md-12 mb-2">
+                            <motion.div variants={itemVariants} className="row mb-2">
+                                <div className="col-md-12">
                                     <label
                                         className="form-label fw-semibold"
                                         style={{ color: "#553500", fontSize: ".8rem" }}
@@ -413,7 +412,7 @@ export default function Contact() {
 
                             <motion.div variants={itemVariants}>
                                 <p
-                                    style={{ color: "#553500", fontSize: ".8rem", marginBottom: "2.5rem" }}
+                                    style={{ color: "#553500", fontSize: ".8rem" }}
                                     className="fw-semibold"
                                 >
                                     <input
@@ -426,7 +425,7 @@ export default function Contact() {
                                     Yes I would like to receive occasional news and tips on how to
                                     expand my business intentionally.
                                     {errors.checkbox && (
-                                        <div style={{ color: "red", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+                                        <div style={{ color: "red", fontSize: "0.75rem" }}>
                                             {errors.checkbox}
                                         </div>
                                     )}
@@ -438,7 +437,7 @@ export default function Contact() {
                                     type="submit"
                                     disabled={loading}
                                     className="btn btn-xl text-light w-100 rounded-pill fw-semibold"
-                                    style={{ backgroundColor: "#553500" }}
+                                    style={{ backgroundColor: "#553500", marginBottom: ".8rem" }}
                                 >
                                     {loading ? "Sending..." : "Contact us"}
                                 </button>
