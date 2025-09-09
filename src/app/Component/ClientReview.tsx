@@ -12,21 +12,21 @@ export default function ClientReview() {
             <div className="row justify-content-center">
                 <div className="col-md-4 mb-4">
                     <img
-                        src="/Images/client1.png"
+                        src="/Images/swiggy.png"
                         alt="Client Review"
                         className="clientreview-image"
                     />
                 </div>
                 <div className="col-md-4 mb-4">
                     <img
-                        src="/Images/client1.png"
+                        src="/Images/blinkit (2).png"
                         alt="Client Review"
                         className="clientreview-image"
                     />
                 </div>
                 <div className="col-md-4 mb-4">
                     <img
-                        src="/Images/client1.png"
+                        src="/Images/reliance (2).png"
                         alt="Client Review"
                         className="clientreview-image"
                     />
