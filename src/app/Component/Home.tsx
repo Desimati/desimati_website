@@ -1,7 +1,17 @@
 "use client";
+import { useEffect } from "react";
 import "./../Style/Home.css";
 
+
 export default function Home() {
+
+   useEffect(() => {
+    const track = document.querySelector(".partners-track");
+    if (track && track.children.length === 5) {
+      track.innerHTML += track.innerHTML;
+    }
+  }, []);
+  
   return (
     <section className="hero-section">
       <div className="hero-content container-fluid px-4">
@@ -24,7 +34,6 @@ export default function Home() {
             <a href="https://apps.apple.com/in/app/gharaya/id6739162919" target="_blank"><img src="/Images/app-store-logo.png" alt="Playstore" /></a>
           </button>
         </div>
-        <br />
         <button className="btn-enquiry">Enquiry for business</button>
 
         <div className="hero-stats">
@@ -38,6 +47,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="hero-partners">
         <div className="partners-track">
           <img src="/Images/instamart.png" alt="Swiggy" />
@@ -45,13 +55,9 @@ export default function Home() {
           <img src="/Images/reliance.png" alt="Reliance Fresh" />
           <img src="/Images/kfc.png" alt="KFC" />
           <img src="/Images/dominos.png" alt="Dominos" />
-          <img src="/Images/instamart.png" alt="Swiggy" />
-          <img src="/Images/blinkit.png" alt="Blinkit" />
-          <img src="/Images/reliance.png" alt="Reliance Fresh" />
-          <img src="/Images/kfc.png" alt="KFC" />
-          <img src="/Images/dominos.png" alt="Dominos" />
         </div>
       </div>
+
     </section>
   );
 }

@@ -11,7 +11,7 @@ export default function About() {
           alt="about us"
           width={1310}
           height={600}
-          className="img-fluid p-2 m-2"
+          className="img-fluid p-2 m-0"
           priority
         />
 

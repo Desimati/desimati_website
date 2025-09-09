@@ -1,6 +1,7 @@
 .about-section {
-    padding: 30px 30px;
+    padding: 40px 0px;
     color: #333;
+    max-width: 100%;
 }
 
 .section-heading {
@@ -45,8 +46,8 @@
 }
 
 .about-image {
-    max-width: 80%;
-    border-radius: 12px;
+    max-width: 90%;
+    border-radius: 12px !important;
     margin-left: 20px;
     position: absolute;
     left: 0;
@@ -63,14 +64,20 @@
 
 .about-item {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
+    gap: 35px;
     margin-bottom: 24px;
-    margin-left: -70px;
+    margin-left: 15px;
+}
+
+.about-item img {
+    align-self: center;
+    width: 95px;
+    height: auto;
 }
 
 .about-item span {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
     margin-left: 5px;
     color: #5a2d00;
