@@ -9,7 +9,7 @@ export default function About() {
         <Image
           src="/Images/0urjourney.png"
           alt="about us"
-          width={1300}
+          width={1310}
           height={600}
           className="img-fluid p-2 m-2"
           priority
