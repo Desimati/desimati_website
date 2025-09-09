@@ -1,17 +1,18 @@
 "use client";
 import { useEffect } from "react";
 import "./../Style/Home.css";
+import Link from "next/link";
 
 
 export default function Home() {
 
-   useEffect(() => {
+  useEffect(() => {
     const track = document.querySelector(".partners-track");
     if (track && track.children.length === 5) {
       track.innerHTML += track.innerHTML;
     }
   }, []);
-  
+
   return (
     <section className="hero-section">
       <div className="hero-content container-fluid px-4">
@@ -26,15 +27,16 @@ export default function Home() {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-order">Order from Us</button>
-          <button className="btn-playstore">
-            <a href="https://play.google.com/store/apps/details?id=co.median.android.kpeknb&pcampaignid=web_share" target="_blank"><img src="/Images/playstore.png" alt="Playstore" /></a>
-          </button>
-          <button className="btn-playstore">
-            <a href="https://apps.apple.com/in/app/gharaya/id6739162919" target="_blank"><img src="/Images/app-store-logo.png" alt="Playstore" /></a>
-          </button>
+          <a href="https://gharaya.com/" target="_blank" className="btn-order">
+            Order from Us
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=co.median.android.kpeknb&pcampaignid=web_share" target="_blank" className="btn-playstore"><img src="/Images/playstore.png" alt="Playstore" /></a>
+          <a href="https://apps.apple.com/in/app/gharaya/id6739162919" target="_blank"><img src="/Images/ios.png" alt="Playstore" className="btn-playstore" /></a>
         </div>
-        <button className="btn-enquiry">Enquiry for business</button>
+
+        <Link href="/contact" className="btn-enquiry">
+          Enquiry for business
+        </Link>
 
         <div className="hero-stats">
           <div className="stat">

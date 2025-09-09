@@ -39,7 +39,7 @@ export default function About() {
                 Our verticals are as follows:-
             </p>
 
-            <div className="about-content row align-items-center">
+            <div className="about-content row">
                 <div className="col-md-5 image-slider">
                     {images.map((img, index) => (
                         <img
@@ -56,14 +56,14 @@ export default function About() {
                         <img src="/Images/about-heading.png" alt="Icon" />
                         <div>
                             <span>Farm To Business</span>
-                            <p className="mt-4">We sell farm fresh vegetables to businesses</p>
+                            <p className="mt-2">We sell farm fresh vegetables to businesses</p>
                         </div>
                     </div>
                     <div className="about-item">
                         <img src="/Images/about-heading.png" alt="Icon" />
                         <div>
                             <span>Business To Business</span>
-                            <p className="mt-4">
+                            <p className="mt-2">
                                 We also purchase and sale of fruits and vegetables for business
                             </p>
                         </div>
@@ -72,7 +72,7 @@ export default function About() {
                         <img src="/Images/about-heading.png" alt="Icon" />
                         <div>
                             <span>Direct To Consumer</span>
-                            <p className="mt-4">
+                            <p className="mt-2">
                                 We also work on providing farm fresh veggies to consumers across
                                 India
                             </p>
@@ -82,7 +82,7 @@ export default function About() {
                         <img src="/Images/about-heading.png" alt="Icon" />
                         <div>
                             <span>Farming</span>
-                            <p className="mt-4">
+                            <p className="mt-2">
                                 We also do extensive farming of specific vegetables
                             </p>
                         </div>
