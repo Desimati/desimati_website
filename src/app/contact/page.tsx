@@ -217,9 +217,9 @@ export default function Contact() {
                         className="position-relative"
                         style={{
                             backgroundColor: "#FFF5D9",
-                            padding: "1.5rem",
+                            padding: "1rem",
                             borderRadius: "0.75rem",
-                            maxWidth: "80%",
+                            maxWidth: "65%",
                             boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
                             zIndex: 1,
                         }}
