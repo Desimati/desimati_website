@@ -18,7 +18,6 @@ export default function About() {
         </h6>
       </div>
 
-      {/* Section 1 */}
       <div className="container my-4">
         <div className="row pt-2 align-items-center">
           <div className="col-md-6 text-center">
@@ -40,7 +39,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Section 2 */}
         <div className="row align-items-center my-4">
           <div className="col-md-6">
             <p className="p-2 m-2" style={{ color: "#553500", marginTop: "20px" }}>
@@ -61,10 +59,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* Vision Section */}
         <h1 className="p-2" style={{ color: "#7E4E00" }}>Our Vision</h1>
 
-        {/* Section 3 */}
         <div className="row align-items-center my-4">
           <div className="col-md-6 text-center">
             <Image
@@ -85,7 +81,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Section 4 */}
         <div className="row align-items-center my-4">
           <div className="col-md-6">
             <p className="m-2 pt-3" style={{ color: "#553500", marginTop: "20px" }}>
