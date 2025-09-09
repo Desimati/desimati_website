@@ -127,31 +127,27 @@
 }
 
 .partners-track {
-    display: flex;
-    width: max-content;
-    gap: 40px;
-    animation: scroll-left 10s linear infinite;
-}
-
-.partners-track img {
-    height: 40px;
-    object-fit: contain;
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  animation: scroll-left 20s linear infinite;
 }
 
 @keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
+
 
 .hero-partners img {
     height: 40px;
     object-fit: contain;
 }
 
-/* .hero-partners img:hover {
+.hero-partners img:hover {
     transform: scale(1.1);
-} */
+}
