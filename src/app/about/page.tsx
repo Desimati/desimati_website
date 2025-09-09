@@ -5,11 +5,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function About() {
   return (
     <>
-      <div className="text-center" >
-        <img className="p-2 " src="/Images/mainabout.png" alt="about us" width="100%" />
+      {/* Hero Section with background image */}
+      <div className="w-100" style={{ height: "90vh" }}>
+        <div className="container-fluid h-100 px-3 position-relative">
+          <div
+            className="w-100 h-100 position-relative"
+            style={{ borderRadius: "2px", overflow: "hidden" }}
+          >
+            <Image
+              src="/Images/mainabout.png"
+              alt="about us"
+              fill
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              priority
+            />      
+          </div>
         </div>
+      </div>
 
-        <div>
+      {/* Content Section */}
+      <div>
         <h1 className="p-2 m-3" style={{ color: "#7E4E00" }}>Our Mission</h1>
         <h6 className="p-2 m-2" style={{ color: "#472401E5" }}>
           At <span style={{ color: "#472401" }}>Desimati</span>, we are reimagining how India buys and enjoys fruits and vegetables. 
@@ -81,7 +99,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="row align-items-center my-4">
+        <div className="row align-items-center my-4 mb-5">
           <div className="col-md-6">
             <p className="m-2 pt-3" style={{ color: "#553500", marginTop: "20px" }}>
               By working closely with farmers and partners, we ensure that quality produce reaches our customers in the freshest, fastest, and most sustainable way possible.
