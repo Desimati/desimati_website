@@ -50,7 +50,7 @@
     border-radius: 12px !important;
     margin-left: 20px;
     position: absolute;
-    left: 0;
+    left: 25px;
     top: 0;
     opacity: 0;
     transition: opacity 1s step-start;
@@ -66,13 +66,13 @@
     display: flex;
     align-items: center;
     gap: 35px;
-    margin-bottom: 24px;
+    margin-bottom: 35px;
     margin-left: 15px;
 }
 
 .about-item img {
     align-self: center;
-    width: 95px;
+    width: 90px;
     height: auto;
 }
 
