@@ -18,7 +18,10 @@ export default function Home() {
         <div className="hero-buttons">
           <button className="btn-order">Order from Us</button>
           <button className="btn-playstore">
-            <img src="/Images/playstore.png" alt="Playstore" />
+            <a href="https://play.google.com/store/apps/details?id=co.median.android.kpeknb&pcampaignid=web_share" target="_blank"><img src="/Images/playstore.png" alt="Playstore" /></a>
+          </button>
+          <button className="btn-playstore">
+            <a href="https://apps.apple.com/in/app/gharaya/id6739162919" target="_blank"><img src="/Images/app-store-logo.png" alt="Playstore" /></a>
           </button>
         </div>
         <br />
