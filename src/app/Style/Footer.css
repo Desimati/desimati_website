@@ -1,10 +1,10 @@
 .footer {
-  background-color: #1A4E12;
+  background-color: #388000;
   color: #fff;
   font-family: var(--font-outfit) !important;
-  padding: 40px 20px 20px 20px;
+  padding: 40px 20px 170px 20px;
   background-image: url("/Images/footer.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
