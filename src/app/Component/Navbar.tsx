@@ -28,7 +28,7 @@ export default function Navbar() {
 
         {/* Menu Items */}
         <div className={`collapse navbar-collapse justify-content-end ${open ? 'show' : ''}`}>
-          <ul className="navbar-nav">
+          <ul className="navbar-nav gap-4">
             <li className="nav-item">
               <Link
                 href="/"

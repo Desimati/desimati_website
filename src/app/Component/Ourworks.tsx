@@ -20,7 +20,7 @@ export default function OurWorks() {
 
   return (
     <section className="ourworks-section container-fluid px-4">
-      <div className="section-heading px-4">
+      <div className="section-heading">
         <h2 className="section-title">Our Works</h2>
         <img src="/Images/heading.png" alt="Decor" className="section-decor" />
       </div>
