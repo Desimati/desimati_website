@@ -56,9 +56,7 @@ export default function Team() {
               style={{
                 transform: `translate(${x}px, -${150 - y}px) rotate(${angle}deg)`,
                 zIndex: 10 - Math.abs(offset),
-                // zIndex: offset === 0 ? 30 : 10,
               }}
-            // onMouseEnter={() => setActive(i)}
             >
               <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
             </div>

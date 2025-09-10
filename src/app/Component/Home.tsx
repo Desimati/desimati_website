@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import "./../Style/Home.css";
 import Link from "next/link";
-
+import Image from "next/image"
 
 export default function Home() {
 
@@ -52,11 +52,17 @@ export default function Home() {
 
       <div className="hero-partners">
         <div className="partners-track">
-          <img src="/Images/instamart.png" alt="Swiggy" />
-          <img src="/Images/blinkit.png" alt="Blinkit" />
-          <img src="/Images/reliance.png" alt="Reliance Fresh" />
-          <img src="/Images/kfc.png" alt="KFC" />
-          <img src="/Images/dominos.png" alt="Dominos" />
+          {[
+            { src: "/Images/instamart.png", alt: "Swiggy" },
+            { src: "/Images/blinkit.png", alt: "Blinkit" },
+            { src: "/Images/reliance.png", alt: "Reliance Fresh" },
+            { src: "/Images/kfc.png", alt: "KFC" },
+            { src: "/Images/dominos.png", alt: "Dominos" },
+          ].map((partner, i) => (
+            <div key={i} className="partner-logo">
+              <Image src={partner.src} alt={partner.alt} fill style={{ objectFit: "contain" }} />
+            </div>
+          ))}
         </div>
       </div>
 
