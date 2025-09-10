@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import "./../Style/OurWorks.css";
+import "./../Style/Ourworks.css";
 import Image from "next/image";
 
 const slides = [
@@ -28,7 +28,7 @@ export default function OurWorks() {
           alt="Decor"
           className="section-decor"
           width={60}
-          height={50}
+          height={50} 
         />
       </div>
 
@@ -43,8 +43,8 @@ export default function OurWorks() {
                 src={slide.img}
                 alt={`ourworks-${index}`}
                 className="ourworks-image"
-                width={1600}
-                height={900} 
+                fill 
+                priority={index === 0}
               />
             </div>
           ))}
