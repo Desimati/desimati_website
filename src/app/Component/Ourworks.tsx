@@ -44,7 +44,7 @@ export default function OurWorks() {
                 alt={`ourworks-${index}`}
                 className="ourworks-image"
                 width={1600}
-                height={1300} 
+                height={900} 
               />
             </div>
           ))}
