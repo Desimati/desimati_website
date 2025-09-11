@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import "./../Style/OurWorks.css";
+import "./../Style/Ourworks.css";
+import Image from "next/image";
 
 const slides = [
   { img: "/Images/ourworks.png" },
@@ -22,7 +23,13 @@ export default function OurWorks() {
     <section className="ourworks-section container-fluid px-4">
       <div className="section-heading">
         <h2 className="section-title">Our Works</h2>
-        <img src="/Images/heading.png" alt="Decor" className="section-decor" />
+        <Image
+          src="/Images/heading.png"
+          alt="Decor"
+          className="section-decor"
+          width={60}
+          height={50} 
+        />
       </div>
 
       <div className="ourworks-slider">
@@ -32,10 +39,12 @@ export default function OurWorks() {
         >
           {slides.map((slide, index) => (
             <div key={index} className="ourworks-slide">
-              <img
+              <Image
                 src={slide.img}
                 alt={`ourworks-${index}`}
                 className="ourworks-image"
+                fill 
+                priority={index === 0}
               />
             </div>
           ))}

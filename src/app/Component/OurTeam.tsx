@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 import "./../Style/Ourteam.css";
 
 const members = [
-  { img: "/Images/ourteam.png" },
-  { img: "/Images/ourteam1.png" },
-  { img: "/Images/ourteam2.png" },
-  { img: "/Images/ourteam.png" },
-  { img: "/Images/ourteam1.png" },
-  { img: "/Images/ourteam2.png" },
-  { img: "/Images/ourteam.png" },
+  { img: "/Images/ashishB.png" },
+  { img: "/Images/dhruvC.png" },
+  { img: "/Images/diptimanB.png" },
+  { img: "/Images/hansaC.png" },
+  { img: "/Images/nitanshB.png" },
+  { img: "/Images/pramodC.png" },
+  { img: "/Images/sakshiB.png" },
+  { img: "/Images/rohitC.png" },
+  { img: "/Images/shubhamB.png" },
+  { img: "/Images/sagarC.png" },
 ];
 
 export default function Team() {
@@ -19,7 +22,7 @@ export default function Team() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % total);
-    }, 2000); 
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [total]);
@@ -41,7 +44,7 @@ export default function Team() {
 
           const spread = 20; // horizontal curve
           const lift = 40; // vertical curve
-          const angle = offset * 22; // slight rotation
+          const angle = offset * 15; // slight rotation
 
           const x = offset * spread;
           const y = Math.abs(offset) * lift;
@@ -54,7 +57,6 @@ export default function Team() {
                 transform: `translate(${x}px, -${150 - y}px) rotate(${angle}deg)`,
                 zIndex: 10 - Math.abs(offset),
               }}
-              // onMouseEnter={() => setActive(i)}
             >
               <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
             </div>

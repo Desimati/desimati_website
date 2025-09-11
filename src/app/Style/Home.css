@@ -48,16 +48,18 @@
     gap: 15px;
 }
 
+
 .btn-order {
     background-color: #fddc77;
     color: #553500;
     border: none;
-    padding: 8px 50px;
+    padding: 9px 50px;
     font-size: 22px;
     font-weight: 600;
     border-radius: 20px;
     border: 3px solid #553500;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-playstore {
@@ -133,13 +135,11 @@
     animation: scroll-left 20s linear infinite;
 }
 
-.partners-track img {
-    height: 35px;
-    object-fit: contain;
-}
-
-.hero-partners img:hover {
-    transform: scale(1.1);
+.partner-logo {
+  position: relative;
+  width: 120px;   
+  height: 38px;
+  flex-shrink: 0; 
 }
 
 @keyframes scroll-left {

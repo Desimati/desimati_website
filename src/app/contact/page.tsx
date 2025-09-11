@@ -152,7 +152,7 @@ export default function Contact() {
                             className="mb-4 fw-semibold"
                             style={{ color: "#553500" }}
                         >
-                            We'd love to hear from you! Weather you need product information, technical assistance, or just want to connect - we're here to help.
+                            We&apos;d love to hear from you! Weather you need product information, technical assistance, or just want to connect - we are here to help.
                         </motion.p>
 
                         <div>
