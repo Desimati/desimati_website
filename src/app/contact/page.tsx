@@ -33,6 +33,8 @@ export default function Contact() {
     const formControls = useAnimation();
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
     const [checkboxChecked, setCheckboxChecked] = useState(false);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [visibleCount, setVisibleCount] = useState(10);
 
     const [formData, setFormData] = useState<ContactFormData>({
         firstName: "",
@@ -132,7 +134,7 @@ export default function Contact() {
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="mb-3"
+                            className="mb-3 text-center"
                             style={{
                                 fontWeight: "400",
                                 fontSize: "2.5rem",
@@ -153,44 +155,157 @@ export default function Contact() {
                             We&apos;d love to hear from you! Weather you need product information, technical assistance, or just want to connect - we are here to help.
                         </motion.p>
 
-                        <div
-                            className="position-relative"
-                            style={{ width: "100%", height: "300px", marginBottom: "4rem" }}
-                        >
-                            <motion.img
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.8, delay: 0.6 }}
-                                src="/Images/contact-person-img.jpg"
-                                alt="Person talking"
-                                className="img-fluid rounded-3 shadow-sm"
+                        <div>
+                            <motion.h4
+                                initial={{ opacity: 0, x: -50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="text-center mb-5"
                                 style={{
-                                    position: "absolute",
-                                    top: "5%",
-                                    left: "20%",
-                                    width: "40%",
-                                    height: "auto",
-                                    objectFit: "contain",
-                                    backgroundColor: "#FFF5D9",
-                                }}
-                            />
-                            <motion.img
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.8, delay: 0.8 }}
-                                src="/Images/contact-building-img.jpg"
-                                alt="Building"
-                                className="img-fluid rounded-3 shadow-sm"
-                                style={{
-                                    position: "absolute",
-                                    top: "50%",
-                                    left: "50%",
-                                    width: "40%",
-                                    height: "auto",
-                                    objectFit: "cover",
-                                }}
-                            />
+                                    fontWeight: "400",
+                                    fontSize: "2.1rem",
+                                    color: "#553500",
+                                    fontFamily: "playfair display",
+                                }}>
+                                Fequently Asked Questions</motion.h4>
+                            {[
+                                {
+                                    q: "What products does Desi Mati deliver?",
+                                    a: "Desi Mati delivers a complete range of fresh fruits and vegetables, including leafy greens, exotic produce, and seasonal varieties. We also offer curated family packs and combo packs to meet everyday household needs.",
+                                },
+                                {
+                                    q: "How do you ensure freshness and quality?",
+                                    a: "We follow a strict “farm-to-home” approach. All produce is procured fresh from farmers and mandis on the same day and delivered directly to consumers without long storage, ensuring natural freshness and quality.",
+                                },
+                                {
+                                    q: "Are your products sourced directly from farmers?",
+                                    a: "Yes. Our produce is sourced directly from farmers and from local mandis, where farmers and farmer groups bring their fresh harvest daily. This ensures authenticity and supports local growers.",
+                                },
+                                {
+                                    q: " What safety and hygiene measures do you follow?",
+                                    a: "We handle all produce with care, maintaining proper hygiene standards during procurement, packaging, and delivery. Our eco-friendly packaging also ensures safe handling of fresh produce.",
+                                },
+                                {
+                                    q: "Is there a minimum order value?",
+                                    a: "No, there is no minimum order value. You can order as per your requirement, whether it is a single item or a complete household basket.",
+                                },
+                                {
+                                    q: "Which cities do you deliver to?",
+                                    a: "Currently, we serve consumers across Madhya Pradesh, Pune, Delhi, and Mumbai. We are expanding rapidly and aim to reach more cities across India.",
+                                },
+                                {
+                                    q: "What is the delivery timeline?",
+                                    a: "Since we buy directly from farmers and mandis daily, all deliveries are fulfilled on the same day or the very next day, depending on location. This ensures every order is fresh from the farm.",
+                                },
+                                {
+                                    q: "Do you offer subscription plans?",
+                                    a: "Yes, we offer flexible subscription packs for households, enabling consumers to receive fresh fruits and vegetables on a regular basis without placing repeated orders.",
+                                },
+                                {
+                                    q: "Do you provide organic produce?",
+                                    a: "Alongside regular produce, we also offer organically grown fruits and vegetables depending on seasonal availability.",
+                                },
+                                {
+                                    q: "What payment options are available?",
+                                    a: "Consumers can pay via all major digital payment methods, including UPI, debit/credit cards, wallets, and net banking.",
+                                },
+                                {
+                                    q: "Can I track my order?",
+                                    a: "Yes, once your order is confirmed, you will be able to track its status and expected delivery time.",
+                                },
+                                {
+                                    q: "How do you handle returns or refunds?",
+                                    a: "If you face any quality concerns, you may request a replacement or refund. Our customer support team ensures quick resolution.",
+                                },
+                                {
+                                    q: "Do you offer seasonal and exotic fruits?",
+                                    a: "Yes. Along with everyday produce, we provide exotic and seasonal fruits and vegetables, so you can enjoy premium and rare varieties.",
+                                },
+                                {
+                                    q: "How is Desi Mati different from others?",
+                                    a: "Unlike traditional quick-commerce platforms, we do not maintain stock. We buy fresh from the farm and deliver fresh, ensuring consumers receive naturally fresh produce with no compromise on quality.",
+                                },
+                                {
+                                    q: "Can I place bulk orders?",
+                                    a: "Yes, bulk orders for families, communities, and housing societies are welcome. Special arrangements can be made for such requirements.",
+                                },
+                                {
+                                    q: "Do you use eco-friendly packaging?",
+                                    a: "Yes. We use eco-friendly crates and sustainable packaging materials to minimize waste and ensure safe delivery.",
+                                },
+                                {
+                                    q: "How can I contact customer support?",
+                                    a: "You can reach our customer support via email or direct phone calls. Our team is available to assist you with all queries and concerns.",
+                                },
+                                {
+                                    q: "Are discounts or loyalty programs available?",
+                                    a: "Yes, we offer seasonal discounts and loyalty benefits for regular customers to make fresh produce more affordable.",
+                                },
+                                {
+                                    q: "Do you follow fair trade practices?",
+                                    a: "Yes, By sourcing directly from farmers and local mandis, we ensure fair pricing and support for farming communities.",
+                                },
+                                {
+                                    q: "How can I stay updated on new products?",
+                                    a: "You can stay updated on our new launches, seasonal produce, and offers by subscribing to our updates or following us on our digital platforms.",
+                                }
+                            ].slice(0, visibleCount).map((item, index) => (
+                                <div key={index}
+                                    className="mb-3 text-center">
+                                    {/* Question */}
+                                    <motion.p
+                                        initial={{ opacity: 0, x: -50 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.8, delay: 0.4 }}
+                                        onClick={() =>
+                                            setOpenIndex(openIndex === index ? null : index)
+                                        }
+                                        style={{
+                                            cursor: "pointer",
+                                            fontWeight: "300",
+                                            color: "#553500",
+                                            marginBottom: "0.3rem",
+                                            textDecoration: "underline",
+                                        }}
+                                    >
+                                        {item.q}
+                                    </motion.p>
+
+                                    {/* Answer (toggle) */}
+                                    {openIndex === index && (
+                                        <motion.div
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0.3 }}
+                                            style={{ color: "#6c4b23", paddingLeft: "1rem", background: "#FFE69A", borderRadius: "10px" }}
+                                        >
+                                            {item.a}
+                                        </motion.div>
+                                    )}
+                                </div>
+                            ))}
+                            <div className="d-flex justify-content-center">
+                                <motion.button
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.4 }}
+                                    className="btn btn-xl text-light rounded-pill fw-semibold"
+                                    style={{ backgroundColor: "#553500", marginBottom: ".8rem" }}
+                                    onClick={() => {
+                                        if (visibleCount === 10) {
+                                            setVisibleCount(20); 
+                                        } else {
+                                            setVisibleCount(10); 
+                                        }
+                                    }}
+                                >
+                                    {visibleCount === 10 ? "Load More" : "Show Less"}
+                                </motion.button>
+                            </div>
+
+
                         </div>
+
                     </div>
                 </div>
 
