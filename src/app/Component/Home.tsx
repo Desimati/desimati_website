@@ -17,12 +17,12 @@ export default function Home() {
     <section className="hero-section">
       <div className="hero-content container-fluid px-4">
         <h1 className="hero-title">
-          We deliver fresh to <br /> your home
+          We deliver fresh produce <br />to your home
         </h1>
 
         <p className="hero-subtext">
-          Desimati brings just-harvested fruits and vegetables straight from
-          trusted growers to consumers, kitchens, and brands across India.
+          Desimati brings just-harvested fruits and vegetables straight from<br />
+          trusted growers to consumers, kitchens, and brands across India.<br />
           Transparent sourcing, cold-chain care, and fair prices.
         </p>
 
@@ -31,12 +31,15 @@ export default function Home() {
             Order from Us
           </a>
           <a href="https://play.google.com/store/apps/details?id=co.median.android.kpeknb&pcampaignid=web_share" target="_blank" className="btn-playstore"><img src="/Images/playstore.png" alt="Playstore" /></a>
-          <a href="https://apps.apple.com/in/app/gharaya/id6739162919" target="_blank"><img src="/Images/ios.png" alt="Playstore" className="btn-playstore" /></a>
+          <a href="https://apps.apple.com/in/app/gharaya/id6739162919" target="_blank" className="btn-appstore"><img src="/Images/ios.png" alt="Playstore"/></a>
         </div>
 
-        <Link href="/contact" className="btn-enquiry">
-          Enquiry for business
-        </Link>
+        <div>
+          <Link href="/contact" className="btn-enquiry">
+            Enquiry for business
+          </Link>
+        </div>
+
 
         <div className="hero-stats">
           <div className="stat">

@@ -1,22 +1,24 @@
 .about-section {
-  padding: 40px 0px;
+  padding: 35px 0px;
   color: #333;
   max-width: 100%;
 }
 
 .section-heading {
+  font-family: playfair;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-left: 18px;
 }
 
 .section-title {
+  color: var(--brown, #7E4E00);
   font-family: var(--font-playfair);
-  font-size: 30px;
-  font-weight: 600;
-  color: #7a3d00;
-  margin: 0;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .section-decor {
@@ -25,13 +27,14 @@
 }
 
 .about-text {
-  font-family: var(--font-outfit);
-  font-size: 18px;
-  line-height: 1.6;
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 40px;
-  color: #5a2d00;
+  color: rgba(71, 36, 1, 0.90);
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: 0.20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .highlight {
@@ -42,11 +45,11 @@
 .image-slider {
   position: relative;
   overflow: hidden;
-  height: 360px; 
-  width:500px; 
-  border-radius: 12px;
-  margin-left:55px;
-  margin-top:12px;
+  height: 360px;
+  width: 500px;
+  border-radius: 16.667px;
+  margin-left: 50px;
+  margin-top: 12px;
 }
 
 .about-image {
@@ -66,28 +69,30 @@
 .about-item {
   display: flex;
   align-items: center;
-  gap: 34px;
-  margin-bottom: 35px;
+  gap: 30px;
+  margin-bottom: 30px;
   margin-left: 15px;
 }
 
 .about-item img {
   align-self: center;
-  width: 95px;
+  width: 90px;
   height: auto;
-  margin-left:15px;
+  margin-left: 15px;
 }
 
 .about-item span {
-  font-size: 24px;
-  font-weight: 400;
-  margin-left: 5px;
-  color: #5a2d00;
+  color: var(--BROWN-200, #553500);
+  font-family: var(--font-ronzino);
+  font-size: 25px;
+  font-style: normal;
+  line-height: normal;
 }
 
 .about-item p {
-  font-family: var(--font-outfit);
-  font-size: 16px;
-  margin: 0;
-  color: #5a2d00;
+  color: var(--BROWN-200, #553500);
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
 }

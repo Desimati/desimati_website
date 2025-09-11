@@ -24,7 +24,7 @@
 .footer-email {
   font-family: var(--font-outfit) !important;
   font-weight: bold !important;
-  font-size: 30px !important;
+  font-size: 25px !important;
   text-decoration: underline !important;
   display: inline-block;
 }

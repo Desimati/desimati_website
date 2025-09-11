@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Outfit, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import { Outfit, Playfair_Display, Rokkitt as Ronzino } from "next/font/google"; 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Navbar from "./Component/Navbar";
@@ -10,13 +9,19 @@ import { Toaster } from "react-hot-toast";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
+});
+
+const ronzino = Ronzino({
+  variable: "--font-ronzino",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${playfair.variable}`}
+      className={`${outfit.variable} ${playfair.variable} ${ronzino.variable}`}
     >
       <body>
         <Navbar />
@@ -45,23 +50,23 @@ export default function RootLayout({
           toastOptions={{
             duration: 2000,
             style: {
-              marginTop: '60px',
-              marginRight: '20px',
-              padding: '16px 24px',
-              color: '#fff',
-              fontSize: '14px',
-              borderRadius: '10px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-              animation: 'slideIn 0.4s ease',
+              marginTop: "60px",
+              marginRight: "20px",
+              padding: "16px 24px",
+              color: "#fff",
+              fontSize: "14px",
+              borderRadius: "10px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              animation: "slideIn 0.4s ease",
             },
             success: {
               style: {
-                background: '#26A65B',
+                background: "#26A65B",
               },
             },
             error: {
               style: {
-                background: '#ef4444',
+                background: "#ef4444",
               },
             },
           }}

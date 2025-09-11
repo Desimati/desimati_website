@@ -1,7 +1,7 @@
 .hero-section {
     background: url("/Images/home.png") no-repeat center center/cover;
     color: #fff;
-    padding: 85px 20px;
+    padding: 50px 20px;
     position: relative;
     z-index: 1;
     margin: 0 14px;
@@ -20,77 +20,117 @@
 }
 
 .hero-title {
-    font-family: var(--font-playfair);
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
     color: #FFF5D9;
+    text-align: center;
+    font-family: var(--font-playfair), serif;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    -webkit-text-stroke-color: #000;
     text-shadow:
-        -1px -1px 2px rgba(0, 0, 0, 0.7),
-        1px -1px 2px rgba(0, 0, 0, 0.7),
-        -1px 1px 2px rgba(0, 0, 0, 0.7),
-        1px 1px 2px rgba(0, 0, 0, 0.7);
+        -1px -1px 1px rgba(0, 0, 0, 0.7),
+        1px -1px 1px rgba(0, 0, 0, 0.7),
+        -1px 1px 1px rgba(0, 0, 0, 0.7),
+        1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .hero-subtext {
-    font-family: var(--font-outfit);
-    font-size: 18px;
-    margin: 30px 0;
-    max-width: 580px;
     color: #FFF5D9;
+    text-align: center;
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 35px;
 }
 
 .hero-buttons {
-    margin-top: 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 35px;
 }
 
-
 .btn-order {
-    background-color: #fddc77;
-    color: #553500;
-    border: none;
-    padding: 9px 50px;
-    font-size: 22px;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
     border-radius: 20px;
-    border: 3px solid #553500;
-    cursor: pointer;
+    border: 2px solid var(--BROWN-200, #553500);
+    background-color: #FFE28B;
     text-decoration: none;
+    color: #553500;
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 40px;
+    margin-right: -50px;
 }
 
 .btn-playstore {
-    background: transparent;
-    border: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
     cursor: pointer;
+    overflow: hidden;
+    margin-right: -50px;
 }
 
 .btn-playstore img {
-    height: 60px;
+    height: 100%;
+    width: auto;
+}
+
+.btn-appstore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: -60px;
+}
+
+.btn-appstore img {
+    height: 100%;
     width: auto;
 }
 
 .btn-enquiry {
-    background: transparent;
-    border: none;
-    font-size: 22px;
-    font-weight: 600;
+    color: var(--yellow-soil, #FFF5D9);
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     text-decoration: underline;
-    color: #FFE9A6;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-top: 8px;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 12%;
+    text-underline-offset: 25%;
+    text-underline-position: from-font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
 }
 
 
 .hero-stats {
     display: flex;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
 }
 
 .stat {
@@ -101,28 +141,26 @@
 }
 
 .stat-number {
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 70px;
     font-family: var(--font-outfit);
     color: #FFE9A6;
 }
 
 .stat-text {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 34px;
     font-family: var(--font-outfit);
     color: #FFE9A6;
 }
 
 .hero-partners {
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(244, 255, 229, 0.30);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 25px 40px;
+    padding: 30px 40px;
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 90px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-left: -20px;
     margin-right: -20px;
@@ -136,10 +174,10 @@
 }
 
 .partner-logo {
-  position: relative;
-  width: 120px;   
-  height: 38px;
-  flex-shrink: 0; 
+    position: relative;
+    width: 120px;
+    height: 40px;
+    flex-shrink: 0;
 }
 
 @keyframes scroll-left {

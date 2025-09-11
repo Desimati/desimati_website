@@ -35,6 +35,7 @@ export default function About() {
               transition={{ duration: 1, delay: 0.5 }}
               className="position-absolute"
               style={{
+                fontFamily: "var(--font-playfair)",
                 bottom: "30px",
                 left: "40px",
                 color: "#FFE9A5",
@@ -42,6 +43,7 @@ export default function About() {
                 fontWeight: "500",
                 textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
                 margin: 0,
+                lineHeight: "1.2",
               }}
             >
               Connecting farmers to users
@@ -63,8 +65,8 @@ export default function About() {
             <Image
               src="/Images/our1.png"
               alt="about"
-              width={600}
-              height={400}
+              width={550}
+              height={350}
               className="img-fluid p-2 m-2"
             />
           </motion.div>
@@ -77,12 +79,10 @@ export default function About() {
             viewport={{ once: true }}
           >
             <p
-              className="p-2 pt-4 fw-semibold"
-              style={{ color: "#553500", marginTop: "20px" }}
+              className="p-2"
+              style={{ color: "#553500", marginTop: "10px", fontFamily: "var(--font-outfit)", fontSize: "18px", fontStyle: "normal", lineHeight: "25px", maxWidth: "615px" }}
             >
-              <b>Our Journey</b>
-              <br />
-              <br />
+              <p>Our Journey</p>
               At Desimati, our story begins with a simple belief: farmers come
               first.
               <br />
@@ -113,8 +113,8 @@ export default function About() {
             viewport={{ once: true }}
           >
             <p
-              className="p-2 m-2 fw-semibold"
-              style={{ color: "#553500", marginTop: "20px" }}
+              className="p-5 m-2"
+              style={{ color: "#553500", marginTop: "10px", fontFamily: "var(--font-outfit)", fontSize: "18px", fontStyle: "normal", lineHeight: "25px", maxWidth: "615px",}}
             >
               In 2020, we became pioneers in farm gate sales across Central
               India. For the first time, farmers were assured of a fair purchase
@@ -141,8 +141,8 @@ export default function About() {
             <Image
               src="/Images/our2.png"
               alt="about"
-              width={600}
-              height={400}
+              width={550}
+              height={350}
               className="img-fluid"
             />
           </motion.div>
@@ -160,8 +160,8 @@ export default function About() {
             <Image
               src="/Images/our3.png"
               alt="about"
-              width={600}
-              height={400}
+              width={550}
+              height={350}
               className="img-fluid p-2 m-2"
             />
           </motion.div>
@@ -173,7 +173,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="p-2 m-2 fw-semibold" style={{ color: "#553500", marginTop: "20px" }}>
+            <p className="p-2 m-2"
+              style={{ color: "#553500", marginTop: "10px", fontFamily: "var(--font-outfit)", fontSize: "18px", fontStyle: "normal", lineHeight: "25px", maxWidth: "615px" }}
+
+            >
               From expanding to corporate vendors in 2021, starting our own
               farms in 2022, and supplying to quick commerce platforms in 2025,
               our journey has been driven by a single purpose: to transform the

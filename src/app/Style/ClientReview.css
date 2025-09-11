@@ -7,10 +7,12 @@
 }
 
 .section-title {
-    font-size: 30px;
-    font-weight: 600;
-    color: #7a3d00;
-    margin: 0;
+    color: var(--brown, #7E4E00);
+    font-family: var(--font-playfair);
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .section-decor {
@@ -19,10 +21,10 @@
 }
 
 .clientreview-image {
-    width: 100%;       
-    max-width: 400px;  
-    height: auto;      
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     display: block;
-    margin: 0 auto;  
-    margin-bottom: 70px;       
+    margin: 0 auto;
+    margin-bottom: 70px;
 }

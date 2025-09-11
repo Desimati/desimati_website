@@ -46,12 +46,12 @@ export default function About() {
         viewport={{ once: true }}
         className="my-5 mx-5"
       >
-        <h2 className="fw-bold mb-3" style={{ color: "#7E4E00" }}>
+        <h2 className="mb-3" style={{ color: "#7E4E00", fontFamily: "var(--font-playfair)", fontSize: "35px",fontStyle: "normal", fontWeight: "500", lineHeight: "normal" }}>
           Our Mission
         </h2>
         <p
-          className="px-0 fw-semibold"
-          style={{ color: "#472401E5" }}
+          className="px-0"
+          style={{ color: "#553500",textAlign: "justify", fontFamily: "var(--font-outfit)", fontSize: "18px",fontStyle: "normal", lineHeight: "25px",letterSpacing: "0.18px" }}
         >
           At <span style={{ color: "#BBA82B" }}>Desimati</span>, our mission begins at the farm. We
           exist to empower farmers by ensuring they receive fair prices for their produce and access
@@ -81,7 +81,7 @@ export default function About() {
             />
           </div>
           <div className="col-md-6">
-            <p className="p-3 fw-semibold " style={{ color: "#553500" }}>
+            <p className="p-3" style={{ color: "#553500",textAlign: "justify",fontFamily: "var(--font-outfit)", fontSize: "18px", fontWeight: "500",fontStyle: "normal", lineHeight: "25px",letterSpacing: "0.18px",maxWidth: "580px" }}>
               We are committed to delivering top-quality produce at the most affordable prices. From
               sorting and packaging to doorstep delivery, every process is designed to balance
               uncompromised freshness with cost-effectiveness. This value-first approach makes
@@ -110,7 +110,7 @@ export default function About() {
             />
           </div>
           <div className="col-md-6">
-            <p className="p-3 fw-semibold" style={{ color: "#553500" }}>
+            <p className="p-3" style={{ color: "#553500",textAlign: "justify",fontFamily: "var(--font-outfit)", fontSize: "18px", fontWeight: "500",fontStyle: "normal", lineHeight: "25px",letterSpacing: "0.18px",maxWidth: "580px" }}>
               Our mission goes beyond food — it is about people. By becoming a major employer of
               women from disadvantaged backgrounds, we invest in human potential, create dignity of
               work, and strengthen communities. Through fairness, inclusion, and innovation, we are
@@ -127,7 +127,7 @@ export default function About() {
           viewport={{ once: true }}
           className="my-5"
         >
-          <h2 className="fw-bold mb-3" style={{ color: "#7E4E00" }}>
+          <h2 className="mb-3" style={{ color: "#7E4E00",fontFamily: "var(--font-playfair)", fontSize: "35px",fontStyle: "normal", fontWeight: "500", lineHeight: "normal" }}>
             Our Vision
           </h2>         
         </motion.div>
@@ -151,7 +151,7 @@ export default function About() {
             />
           </div>
           <div className="col-md-6">
-            <p className="p-3 fw-semibold" style={{ color: "#553500" }}>
+            <p className="p-3" style={{ color: "#553500",textAlign: "justify",fontFamily: "var(--font-outfit)", fontSize: "18px", fontWeight: "500",fontStyle: "normal", lineHeight: "25px",letterSpacing: "0.18px",maxWidth: "580px" }}>
               We envision a future where every farmer thrives, every customer enjoys fresh and
               affordable produce, and the supply chain is a seamless bridge rather than a barrier.
               Desimati aims to be the trusted name in transforming the farm-to-table experience
@@ -179,7 +179,7 @@ export default function About() {
             />
           </div>
           <div className="col-md-6">
-            <p className="p-3 fw-semibold" style={{ color: "#553500" }}>
+            <p className="p-3" style={{ color: "#553500",textAlign: "justify",fontFamily: "var(--font-outfit)", fontSize: "18px", fontWeight: "500",fontStyle: "normal", lineHeight: "25px",letterSpacing: "0.18px",maxWidth: "580px" }}>
               Our vision is to create a model where fairness and quality are never compromised — a
               system where farmers prosper, customers save, and communities grow stronger. By
               digitising the supply chain and building meaningful experiences for end-users, we
