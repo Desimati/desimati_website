@@ -4,9 +4,9 @@ import "./../Style/Ourworks.css";
 import Image from "next/image";
 
 const slides = [
-  { img: "/Images/ourworks.png" },
-  { img: "/Images/ourworks1.png" },
-  { img: "/Images/ourworks2.png" },
+  { img: "/Images/xyz.png" },
+  { img: "/Images/ourworks (2).png" },
+  { img: "/Images/source_image.png" },
 ];
 
 export default function OurWorks() {
@@ -20,7 +20,7 @@ export default function OurWorks() {
   }, []);
 
   return (
-    <section className="ourworks-section container-fluid px-4">
+    <section className="ourworks-section container-fluid px-5">
       <div className="section-heading">
         <h2 className="section-title">Our Works</h2>
         <Image
@@ -28,7 +28,7 @@ export default function OurWorks() {
           alt="Decor"
           className="section-decor"
           width={60}
-          height={50} 
+          height={50}
         />
       </div>
 
@@ -43,18 +43,19 @@ export default function OurWorks() {
                 src={slide.img}
                 alt={`ourworks-${index}`}
                 className="ourworks-image"
-                fill 
+                fill
                 priority={index === 0}
               />
+              <div className="ourworks-overlay" />
+              <p className="ourworks-text">
+                Delivering fresh, quality farm produce through a smart,
+                tech-driven supply chain — from local farms to your table,
+                swiftly and sustainably.
+              </p>
             </div>
           ))}
         </div>
       </div>
-
-      <p className="ourworks-text">
-        Delivering fresh, quality farm produce through a smart, tech-driven
-        supply chain — from local farms to your table, swiftly and sustainably.
-      </p>
     </section>
   );
 }

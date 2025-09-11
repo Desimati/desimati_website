@@ -9,13 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 18px;
 }
 
 .section-title {
   color: var(--brown, #7E4E00);
   font-family: var(--font-playfair);
-  font-size: 35px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -48,7 +47,7 @@
   height: 360px;
   width: 500px;
   border-radius: 16.667px;
-  margin-left: 50px;
+  margin-left: 15px;
   margin-top: 12px;
 }
 
@@ -69,7 +68,7 @@
 .about-item {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   margin-bottom: 30px;
   margin-left: 15px;
 }

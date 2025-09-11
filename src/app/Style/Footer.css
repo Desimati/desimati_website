@@ -3,8 +3,8 @@
   color: #fff;
   font-family: var(--font-outfit) !important;
   padding: 40px 20px 170px 20px;
-  background-image: url("/Images/footer.png");
-  background-size: 100% 100%;
+  background-image: url("/Images/footer (2).png");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

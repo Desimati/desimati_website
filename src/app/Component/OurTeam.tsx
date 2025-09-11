@@ -28,7 +28,7 @@ export default function Team() {
   }, [total]);
 
   return (
-    <section className="container-fluid px-4">
+    <section className="container-fluid px-5 mt-5">
       <div className="section-heading">
         <h2 className="section-title">Our Team</h2>
         <img src="/Images/heading.png" alt="Decor" className="section-decor" />

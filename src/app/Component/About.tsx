@@ -24,7 +24,7 @@ export default function About() {
   }, [images.length]);
 
   return (
-    <section className="about-section container-fluid px-4">
+    <section className="about-section container-fluid px-5">
       <div className="section-heading">
         <h2 className="section-title">About Us</h2>
         <Image

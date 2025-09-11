@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="col-md-4 mb-4">
                         <img src="/Images/logo.png" alt="Logo" height="60" className="mb-3" />
                         <p>Send us an email -</p>
-                        <p className="footer-email">contactdesimati@gmail.com</p>
+                        <p className="footer-email">contactus@desimati.com</p>
                         <p className='mt-2'>+91-6261497479,+91-7024145757</p>
                     </div>
 

@@ -125,7 +125,7 @@ export default function Contact() {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            style={{ color: "#B16E01", fontSize: "0.9rem" }}
+                            style={{ color: "#B16E01", fontSize: "1.0rem", fontFamily: "var(--font-outfit)" }}
                         >
                             Contact us
                         </motion.p>
@@ -134,12 +134,12 @@ export default function Contact() {
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="mb-3 text-center"
+                            className="mb-3 mt-1"
                             style={{
                                 fontWeight: "400",
                                 fontSize: "2.5rem",
                                 color: "#553500",
-                                fontFamily: "playfair display",
+                                fontFamily: "var(--font-playfair)",
                             }}
                         >
                             How can we help ?
@@ -149,8 +149,8 @@ export default function Contact() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.4 }}
-                            className="mb-4 fw-semibold"
-                            style={{ color: "#553500" }}
+                            className="mb-4"
+                            style={{ color: "#553500", fontFamily: "var(--font-outfit)", fontSize: "18px", lineHeight: "30px" }}
                         >
                             We&apos;d love to hear from you! Weather you need product information, technical assistance, or just want to connect - we are here to help.
                         </motion.p>
@@ -160,12 +160,13 @@ export default function Contact() {
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className="text-center mb-5"
+                                className="text-center mb-3 mt-5"
                                 style={{
-                                    fontWeight: "400",
+                                    fontWeight: "500",
                                     fontSize: "2.1rem",
                                     color: "#553500",
-                                    fontFamily: "playfair display",
+                                    lineHeight: "72px",
+                                    fontFamily: "var(--font-playfair)",
                                 }}>
                                 Fequently Asked Questions</motion.h4>
                             {[
@@ -251,7 +252,7 @@ export default function Contact() {
                                 }
                             ].slice(0, visibleCount).map((item, index) => (
                                 <div key={index}
-                                    className="mb-3 text-center">
+                                    className="mb-4 text-center">
                                     {/* Question */}
                                     <motion.p
                                         initial={{ opacity: 0, x: -50 }}
@@ -261,6 +262,9 @@ export default function Contact() {
                                             setOpenIndex(openIndex === index ? null : index)
                                         }
                                         style={{
+                                            fontFamily: "var(--font-outfit)",
+                                            fontSize: "20px",
+                                            textAlign: "center",
                                             cursor: "pointer",
                                             fontWeight: "300",
                                             color: "#553500",
@@ -277,7 +281,16 @@ export default function Contact() {
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             transition={{ duration: 0.3 }}
-                                            style={{ color: "#6c4b23", paddingLeft: "1rem", background: "#FFE69A", borderRadius: "10px" }}
+                                            style={{
+                                                fontFamily: "var(--font-outfit)",
+                                                fontSize:"16px",
+                                                textAlign:"center",
+                                                color: "#6c4b23",
+                                                background: "#FFE69A",
+                                                borderRadius: "10px",
+                                                marginTop: "0.5rem",
+                                                padding:"8px 20px"
+                                            }}
                                         >
                                             {item.a}
                                         </motion.div>
@@ -290,12 +303,12 @@ export default function Contact() {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.8, delay: 0.4 }}
                                     className="btn btn-xl text-light rounded-pill fw-semibold"
-                                    style={{ backgroundColor: "#553500", marginBottom: ".8rem" }}
+                                    style={{ backgroundColor: "#553500", marginBottom: ".8rem", padding: "10px 20px" }}
                                     onClick={() => {
                                         if (visibleCount === 10) {
-                                            setVisibleCount(20); 
+                                            setVisibleCount(20);
                                         } else {
-                                            setVisibleCount(10); 
+                                            setVisibleCount(10);
                                         }
                                     }}
                                 >
@@ -330,6 +343,7 @@ export default function Contact() {
                     <div
                         className="position-relative"
                         style={{
+                            fontFamily:"var(--font-outfit)",
                             backgroundColor: "#FFF5D9",
                             padding: ".2rem 1rem",
                             borderRadius: "0.75rem",

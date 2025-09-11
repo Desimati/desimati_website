@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function ClientReview() {
     return (
-        <section className="clientreview-section container-fluid px-4">
+        <section className="clientreview-section container-fluid px-5">
             <div className="section-heading">
                 <h2 className="section-title">Client Review</h2>
                 <Image
