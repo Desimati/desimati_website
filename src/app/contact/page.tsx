@@ -228,7 +228,7 @@ export default function Contact() {
                             className="mb-4"
                             style={{ color: "#553500", fontFamily: "var(--font-outfit)", fontSize: "18px", lineHeight: "30px" }}
                         >
-                            We&apos;d love to hear from you! Weather you need product information, technical assistance, or just want to connect - we are here to help.
+                            We&apos;d love to hear from you! Whether you need product information, technical assistance, or just want to connect - we are here to help.
                         </motion.p>
 
                         <div>
@@ -349,7 +349,7 @@ export default function Contact() {
                         alt="Farm Image"
                         className="position-absolute"
                         width={1000}
-                        height={1200}
+                        height={1800}
                         style={{ objectFit: "cover", top: 0, left: 0, zIndex: 0 }}
                     />
 
