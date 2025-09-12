@@ -17,15 +17,17 @@ const members = [
 
 export default function Team() {
   const [active, setActive] = useState(3);
+  const [paused, setPaused] = useState(false);
   const total = members.length;
 
   useEffect(() => {
+    if (paused) return;
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % total);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [total]);
+  }, [total, paused]);
 
   return (
     <section className="container-fluid px-5 mt-5">
@@ -56,7 +58,10 @@ export default function Team() {
               style={{
                 transform: `translate(${x}px, -${150 - y}px) rotate(${angle}deg)`,
                 zIndex: 10 - Math.abs(offset),
+                cursor: "pointer",
               }}
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
             >
               <img src={m.img} alt={`member-${i}`} className="tcard-avatar" />
             </div>

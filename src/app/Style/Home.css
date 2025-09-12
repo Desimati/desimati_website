@@ -6,6 +6,9 @@
     z-index: 1;
     margin: 0 14px;
     border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroFadeIn 1.5s ease-out forwards;
 }
 
 .hero-section::before {
@@ -189,5 +192,16 @@
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

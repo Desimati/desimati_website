@@ -46,7 +46,7 @@ export default function About() {
 
       <div className="about-content row">
         {/* LEFT SIDE SLIDER */}
-        <div className="col-md-5 image-slider">
+        <div className="image-slider">
           {images.map((img, index) => (
             <div
               key={index}
@@ -56,6 +56,7 @@ export default function About() {
                 src={img}
                 alt="Farmer"
                 fill
+                priority={index === 0}
                 style={{ objectFit: "cover", borderRadius: "12px" }}
               />
             </div>
@@ -63,44 +64,45 @@ export default function About() {
         </div>
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="col-md-7">
-          <div className="about-item">
-            <Image src="/Images/about-heading.png" width={90} height={190} alt="Icon" />
-            <div>
-              <span>Farm To Business</span>
-              <p className="mt-2">We sell farm fresh vegetables to businesses</p>
+          <div className="about-right">
+            <div className="about-item">
+              <Image src="/Images/about-heading.png" width={90} height={190} alt="Icon" />
+              <div>
+                <span>Farm To Business</span>
+                <p className="mt-2">We sell farm fresh vegetables to businesses</p>
+              </div>
             </div>
-          </div>
-          <div className="about-item">
-            <Image src="/Images/about-heading.png" width={90} height={190} alt="Icon" />
-            <div>
-              <span>Business To Business</span>
-              <p className="mt-2">
-                We also purchase and sale of fruits and vegetables for business
-              </p>
+            <div className="about-item">
+              <Image src="/Images/about-heading.png" width={90} height={190} alt="Icon" />
+              <div>
+                <span>Business To Business</span>
+                <p className="mt-2">
+                  We also purchase and sale of fruits and vegetables for business
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="about-item">
-            <Image src="/Images/about-heading.png" width={90} height={190} alt="Icon" />
-            <div>
-              <span>Direct To Consumer</span>
-              <p className="mt-2">
-                We also work on providing farm fresh veggies to consumers across
-                India
-              </p>
+            <div className="about-item">
+              <Image src="/Images/about-heading.png" width={90} height={190} alt="Icon" />
+              <div>
+                <span>Direct To Consumer</span>
+                <p className="mt-2">
+                  We also work on providing farm fresh veggies to consumers across
+                  India
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="about-item">
-            <Image src="/Images/about-heading.png" width={90} height={90} alt="Icon" />
-            <div>
-              <span>Farming</span>
-              <p className="mt-2">
-                We also do extensive farming of specific vegetables
-              </p>
+            <div className="about-item">
+              <Image src="/Images/about-heading.png" width={90} height={90} alt="Icon" />
+              <div>
+                <span>Farming</span>
+                <p className="mt-2">
+                  We also do extensive farming of specific vegetables
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 }
